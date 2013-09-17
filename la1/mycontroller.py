@@ -32,6 +32,7 @@ import pox.lib.packet as pkt
 from pox.lib.packet.ethernet import ethernet
 from pox.lib.packet.ipv4 import ipv4
 from pox.lib.packet.arp import arp
+from pox.lib.packet.dns import dns
 
 log = core.getLogger()
 
@@ -76,7 +77,7 @@ class Tutorial (object):
     self.connection.send(msg)
   """
 
-  def resend_packet (self, packet_in, out_port):
+  def send_packet (self, packet_in, out_port):
     """
     Instructs the switch to resend a packet that it had sent to us.
     "packet_in" is the ofp_packet_in object the switch had sent to the
@@ -124,6 +125,11 @@ class Tutorial (object):
 		print "responding to ARP request to reach %s\n"%packet.payload.protodst
 		arp_rep.protosrc = IPAddr("10.0.10.2")
 		arp_rep.hwsrc = EthAddr("00:00:00:00:00:02")	#MAC of h2
+	if packet.payload.protodst == "10.0.0.10":  #ARP asking for the DNS server 10.0.0.10
+		print "responding to ARP request to reach DNS server\n"
+		arp_rep.protosrc = IPAddr("10.0.0.10")
+		arp_rep.hwsrc = EthAddr("00:00:00:00:00:10")	#MAC of "fake" DNS server.
+
 	ether = ethernet()
 	ether.type = packet.ARP_TYPE
 	ether.dst = packet.src
@@ -176,6 +182,31 @@ class Tutorial (object):
       msg_rep.actions.append(of.ofp_action_output(port=1))
       self.connection.send(msg_rep)
 
+  def setup_dns_records(self):
+	self.dns_records = {}
+	self.dns_records["target_1"] = "10.0.10.2"
+	self.dns_records["target_2"] = "10.0.10.3"
+
+  def DNS_server_res(self, packet, packet_in):
+      dns_pkt = packet.find('dns')
+      #TODO create dns reply packet
+      dns_rep = dns()
+      #set dns_sourc, dest, answer
+
+      #print "%s %s\n" % (self.dns_records["target_1 A IN "],self.dns_records["target_2 A IN "])
+      if dns_pkt is not None:
+	#log.debug(packet)
+	for q in dns_pkt.questions:
+		print "Question = %s\n" % q
+		qs = str(q).split()
+		if qs[0] in self.dns_records:
+			print "dns record found\n"
+			a = self.dns_records[qs[0]]
+			log.debug(a)
+			dns_pkt.answers.append(pkt.dns.rr(q, pkt.dns.rr.A_TYPE, qs[2], 1, len(IPAddr(a).toRaw()),IPAddr(a).toRaw()))
+			self.send_packet(packet_in.data,of.OFPP_FLOOD)
+			
+			
 
 
   def act_like_switch (self, packet, packet_in):
@@ -192,6 +223,7 @@ class Tutorial (object):
       if packet.type == ethernet.IP_TYPE:
 		if packet.payload.dstip == IPAddr("10.0.0.10"):	#if this is a DNS request
 			print "received a DNS request\n"
+			self.DNS_server_res(packet,packet_in)
 		if packet.payload.protocol == ipv4.ICMP_PROTOCOL:
 			print "received a ICMP proto mesage\n"
 
@@ -249,7 +281,12 @@ class Tutorial (object):
     #self.act_like_hub(packet, packet_in)
     self.act_like_switch(packet, packet_in)
 
-
+  def _handle_ConnectionUp(self, event): ##Add flows from very beginning.
+      vIP = "10.0.10.2"
+      rIP = "10.0.0.2"
+      sIP = "10.0.0.1"
+      self.add_vflow(sIP,vIP,rIP)
+      self.setup_dns_records()
 
 def launch ():
   """
