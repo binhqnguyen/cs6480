@@ -1,13 +1,4 @@
- 
-
-
-
-
-                if packet.payload.protocol == ipv4.ICMP_PROTOCOL:
-                        ##do nothing. Just leave the ICMP message to follow the flow-table.
-                        log.debug("received a ICMP proto mesage\n")
-
-
+#!/bin/python
 import random
 from pox.core import core
 import pox.openflow.libopenflow_01 as of
@@ -125,9 +116,6 @@ ayload.srcip, self.rIP_vIP[resolved_IP], resolved_IP, packet_in.in_port, self.de
 
 
 
-
-
-
     def respond_to_arp(self, packet, packet_in):
 
         def create_arp_respond(arp_req, answer):
@@ -164,12 +152,12 @@ _vIP,ask_for_rIP, str(answer)))
                 self.send_packet(ether.pack(),packet_in.in_port)
         else:   log.info("No MAC found with requested ip %s\n" % ask_for_rIP)
 
-  def register_dns_records(self):
+    def register_dns_records(self):
         self.dns_records = {}
         log.debug("Registering hostname-ip dns records...\n")
         self.dns_records["target"] = self.PROTECTED_HOST_IP
 
-  def register_IP_mac_mapping(self):
+    def register_IP_mac_mapping(self):
         self.mac_mapping = {}
         log.debug("Registering rIP-MAC mapping, fixed vIP-rIP, and used vIP...\n")
         for i in range (1,11):
@@ -179,7 +167,7 @@ _vIP,ask_for_rIP, str(answer)))
         #register MAC-port mapping
         self.MAC_port[EthAddr("00:00:00:00:00:0"+str(i))] = i
 
-  def create_dns_rep(self, dns_req, questions_answers):
+    def create_dns_rep(self, dns_req, questions_answers):
         dns_rep = pkt.dns()
         dns_rep.questions = dns_req.questions
         answers = []
@@ -228,36 +216,47 @@ _vIP,ask_for_rIP, str(answer)))
         return ether_rep
         
 
-  ##Send an ethernet packet to outport
-  #packet_in: ethernet.pack()
-  #out_port: output port        
-  def send_packet (self, packet_in, out_port):
-    msg = of.ofp_packet_out()
-    msg.data = packet_in
+    ##Send an ethernet packet to outport
+    #packet_in: ethernet.pack()
+    #out_port: output port        
+    def send_packet (self, packet_in, out_port):
+        msg = of.ofp_packet_out()
+        msg.data = packet_in
 
-    # Add an action to send to the specified port
-    action = of.ofp_action_output(port = out_port)
-    msg.actions.append(action)
+        # Add an action to send to the specified port
+        action = of.ofp_action_output(port = out_port)
+        msg.actions.append(action)
 
-    # Send message to switch
-    self.connection.send(msg)
+        # Send message to switch
+        self.connection.send(msg)
 
-  def _handle_PacketIn (self, event):
-    """
-    Handles packet in messages from the switch.
-    """
+    def act_like_switch (self, packet, packet_in):
 
-    packet = event.parsed # This is the parsed packet data.
-    if not packet.parsed:
-      log.warning("Ignoring incomplete packet")
-      return
+        if packet.type == packet.ARP_TYPE:
+                    log.debug("received an ARP pkt\n")
+                    if packet.payload.opcode == packet.payload.REQUEST: #received an ARP request
+                            self.respond_to_arp(packet, packet_in)
+        if packet.type == ethernet.IP_TYPE:
+                    if packet.payload.dstip == self.DNS_SERVER_IP:  #if this is a DNS request
+                            log.debug("received a DNS request\n")
+                            self.DNS_respond(packet,packet_in)
+                    if packet.payload.protocol == ipv4.ICMP_PROTOCOL:
+                            ##do nothing. Just leave the ICMP message to follow the flow-table.
+                            log.debug("received a ICMP proto mesage\n")
 
-    packet_in = event.ofp # The actual ofp_packet_in message.
+    def _handle_PacketIn (self, event):
 
-    # Comment out the following line and uncomment the one after
-    # when starting the exercise.
-    #self.act_like_hub(packet, packet_in)
-    self.act_like_switch(packet, packet_in)
+        packet = event.parsed # This is the parsed packet data.
+        if not packet.parsed:
+          log.warning("Ignoring incomplete packet")
+          return
+
+        packet_in = event.ofp # The actual ofp_packet_in message.
+
+        # Comment out the following line and uncomment the one after
+        # when starting the exercise.
+        #self.act_like_hub(packet, packet_in)
+        self.act_like_switch(packet, packet_in)
 
 def launch ():
   """
@@ -267,42 +266,4 @@ def launch ():
     log.debug("Controlling %s" % (event.connection,))
     Binh_Controller(event.connection)
   core.openflow.addListenerByName("ConnectionUp", start_switch)
-
-
-
-                                                                                            299,3         Bot
-                                resolved_IP = self.dns_records[qs[0]]
-                                log.info("dns record found: %s->%s\n" %(q, resolved_IP))
-                                #register resolved answer (rIP) and create a vIP for the rIP
-                                create_vIP(resolved_IP)
-                                #put the VIRTUAL IP into DNS answer
-                                questions_answers[q] = self.rIP_vIP[resolved_IP]
-                                log.debug("%s,%s" % (q, questions_answers[q]))
-
-                if len(questions_answers) > 0:
-                        dns_rep = self.create_dns_rep(dns_req,questions_answers)
-                        ipv4_dns_rep = self.create_ipv4_dns(packet, dns_rep)
-                        self.send_packet(ipv4_dns_rep.pack(), packet_in.in_port)
-                        push_flow(packet.payload.srcip, self.rIP_vIP[resolved_IP], resolved_IP,packet_in.in_po
-rt,self.default_outport)
-                        log.info("Flow pushed srcip,vIP,rIP,in_port,out_port = %s, %s, %s,%s,%s\n" % (packet.p
-ayload.srcip, self.rIP_vIP[resolved_IP], resolved_IP, packet_in.in_port, self.default_outport))
-                else: log.info("no dns found\n" )
-
-
-  def act_like_switch (self, packet, packet_in):
-
-      if packet.type == packet.ARP_TYPE:
-                log.debug("received an ARP pkt\n")
-                if packet.payload.opcode == packet.payload.REQUEST: #received an ARP request
-                        self.respond_to_arp(packet, packet_in)
-      if packet.type == ethernet.IP_TYPE:
-                if packet.payload.dstip == self.DNS_SERVER_IP:  #if this is a DNS request
-                        log.debug("received a DNS request\n")
-                        self.DNS_respond(packet,packet_in)
-                if packet.payload.protocol == ipv4.ICMP_PROTOCOL:
-                        ##do nothing. Just leave the ICMP message to follow the flow-table.
-
-
-
 
