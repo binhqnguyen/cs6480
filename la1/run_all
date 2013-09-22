@@ -1,8 +1,8 @@
+#!/bin/bash
 echo "***Copying binh_controller.py to /home/mininet/POX/pox/samples/ ..."
 echo "=========================="
 cp binh_controller.py /home/mininet/POX/pox/samples
 C_DIR=$(pwd)
-#echo $C_DIR
 R_DIR=$C_DIR/result
 echo "****Removing old results..."
 echo "==================="

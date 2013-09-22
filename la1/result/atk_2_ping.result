@@ -1,0 +1,11 @@
+4831
+PING target (10.186.149.177) 56(84) bytes of data.
+64 bytes from 10.186.149.177: icmp_req=1 ttl=64 time=67.0 ms
+64 bytes from 10.186.149.177: icmp_req=2 ttl=64 time=0.156 ms
+64 bytes from 10.186.149.177: icmp_req=3 ttl=64 time=0.141 ms
+64 bytes from 10.186.149.177: icmp_req=4 ttl=64 time=0.287 ms
+64 bytes from 10.186.149.177: icmp_req=5 ttl=64 time=0.660 ms
+
+--- target ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 40104ms
+rtt min/avg/max/mdev = 0.141/13.659/67.051/26.696 ms

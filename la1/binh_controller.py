@@ -12,7 +12,7 @@ from pox.lib.packet.dns import dns
 
 log = core.getLogger()
 
-class Tutorial (object):
+class Binh_Controller (object):
 
     def __init__ (self, connection):
         # Keep track of the connection to the switch so that we can
@@ -72,8 +72,7 @@ class Tutorial (object):
                 msg_send.match.dl_type = 0x800 #ip packet
                 msg_send.match.in_port = in_port
                 msg_send.match.nw_dst = vIP  #host 2 vIP
-                msg_send.actions.append(of.ofp_action_nw_addr.set_dst(IPAddr(rIP)))     #set pkt's dst IP to h
-2 rIP.
+                msg_send.actions.append(of.ofp_action_nw_addr.set_dst(IPAddr(rIP)))     #set pkt's dst IP to h2 rIP.
                 msg_send.actions.append(of.ofp_action_output(port=out_port))
                 self.connection.send(msg_send)
 
@@ -108,10 +107,8 @@ class Tutorial (object):
                         dns_rep = self.create_dns_rep(dns_req,questions_answers)
                         ipv4_dns_rep = self.create_ipv4_dns(packet, dns_rep)
                         self.send_packet(ipv4_dns_rep.pack(), packet_in.in_port)
-                        push_flow(packet.payload.srcip, self.rIP_vIP[resolved_IP], resolved_IP,packet_in.in_po
-rt,self.default_outport)
-                        log.info("Flow pushed srcip,vIP,rIP,in_port,out_port = %s, %s, %s,%s,%s\n" % (packet.p
-ayload.srcip, self.rIP_vIP[resolved_IP], resolved_IP, packet_in.in_port, self.default_outport))
+                        push_flow(packet.payload.srcip, self.rIP_vIP[resolved_IP], resolved_IP,packet_in.in_port,self.default_outport)
+                        log.info("Flow pushed srcip,vIP,rIP,in_port,out_port = %s, %s, %s,%s,%s\n" % (packet.payload.srcip, self.rIP_vIP[resolved_IP], resolved_IP, packet_in.in_port, self.default_outport))
                 else: log.info("no dns found\n" )
 
 
@@ -145,8 +142,7 @@ ayload.srcip, self.rIP_vIP[resolved_IP], resolved_IP, packet_in.in_port, self.de
         log.debug("ARP asking for vIP=%s (rIP=%s)"%(ask_for_vIP,ask_for_rIP) )
         if ask_for_rIP in self.mac_mapping:
                 answer = EthAddr(self.mac_mapping[ask_for_rIP])
-                log.debug("responding to ARP request to reach %s (ACTUALLY rIP %s), answer is %s\n" % (ask_for
-_vIP,ask_for_rIP, str(answer)))
+                log.debug("responding to ARP request to reach %s (ACTUALLY rIP %s), answer is %s\n" % (ask_for_vIP,ask_for_rIP, str(answer)))
                 arp_rep = create_arp_respond(packet, answer)
                 ether = create_eth_packet(arp_rep.hwsrc, packet.src, arp_rep)
                 self.send_packet(ether.pack(),packet_in.in_port)
@@ -222,16 +218,13 @@ _vIP,ask_for_rIP, str(answer)))
     def send_packet (self, packet_in, out_port):
         msg = of.ofp_packet_out()
         msg.data = packet_in
-
         # Add an action to send to the specified port
         action = of.ofp_action_output(port = out_port)
         msg.actions.append(action)
-
         # Send message to switch
         self.connection.send(msg)
 
     def act_like_switch (self, packet, packet_in):
-
         if packet.type == packet.ARP_TYPE:
                     log.debug("received an ARP pkt\n")
                     if packet.payload.opcode == packet.payload.REQUEST: #received an ARP request
