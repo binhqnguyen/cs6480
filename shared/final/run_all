@@ -1,0 +1,32 @@
+#!/bin/bash
+if [ "$1" == "" ]; then
+	echo "Usage: sudo ./run_all <path to pox.py>. (For example: ./run_all /home/mininet/POX)"
+	exit
+fi
+POX_DIR=$1/pox/samples/
+echo "***Copying binh_controller.py to $POX_DIR ..."
+echo "=========================="
+cp binh_controller.py $POX_DIR
+C_DIR=$(pwd)
+R_DIR=$C_DIR/result
+echo "****Removing old results..."
+echo "==================="
+rm -r $R_DIR
+echo "****Creating result directory: $R_DIR ..."
+echo "==================="
+mkdir $R_DIR
+echo "****Jumping to POX directory ..."
+echo "==================="
+cd /home/mininet/POX
+echo "****Starting the binh_controller ..."
+echo "==================="
+./pox.py log.level --INFO samples.binh_controller > $R_DIR/binh_controller.log 2>&1 &
+echo "****Jumping to $C_DIR, running dns_mutate.py (topology creating and pinging)..."
+echo "==================="
+cd $C_DIR
+./dns_mutate.py
+echo "****Killing binh_controller...."
+echo "==================="
+PID=$(ps -ef | grep binh_controller | grep -v grep | awk '{print $2}')
+kill $PID
+echo "****Experiment DONE! results are in $R_DIR"
