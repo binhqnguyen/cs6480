@@ -1,7 +1,12 @@
 #!/bin/bash
-echo "***Copying binh_controller.py to /home/mininet/POX/pox/samples/ ..."
+if [ "$1" == "" ]; then
+	echo "Usage: sudo ./run_all <path to pox.py>. (For example: ./run_all /home/mininet/POX)"
+	exit
+fi
+POX_DIR=$1/pox/samples/
+echo "***Copying binh_controller.py to $POX_DIR ..."
 echo "=========================="
-cp binh_controller.py /home/mininet/POX/pox/samples
+cp binh_controller.py $POX_DIR
 C_DIR=$(pwd)
 R_DIR=$C_DIR/result
 echo "****Removing old results..."
