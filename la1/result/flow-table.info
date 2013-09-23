@@ -1,5 +1,0 @@
-stats_reply (xid=0x649eaa07): flags=none type=1(flow)
-  cookie=0, duration_sec=50s, duration_nsec=111000000s, table_id=0, priority=32768, n_packets=5, n_bytes=490, idle_timeout=0,hard_timeout=0,ip,in_port=2,nw_dst=10.186.149.177,actions=mod_nw_dst:10.0.0.3,output:3
-  cookie=0, duration_sec=100s, duration_nsec=251000000s, table_id=0, priority=32768, n_packets=5, n_bytes=490, idle_timeout=0,hard_timeout=0,ip,in_port=1,nw_dst=10.34.49.41,actions=mod_nw_dst:10.0.0.3,output:3
-  cookie=0, duration_sec=50s, duration_nsec=74000000s, table_id=0, priority=32768, n_packets=5, n_bytes=490, idle_timeout=0,hard_timeout=0,ip,in_port=3,nw_dst=10.0.0.2,actions=mod_nw_src:10.186.149.177,output:2
-  cookie=0, duration_sec=100s, duration_nsec=214000000s, table_id=0, priority=32768, n_packets=5, n_bytes=490, idle_timeout=0,hard_timeout=0,ip,in_port=3,nw_dst=10.0.0.1,actions=mod_nw_src:10.34.49.41,output:1

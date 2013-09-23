@@ -5,7 +5,8 @@ Package structure
 ================
 1. binh_controller.py: controller and DNS server.
 2. run_all: bash script to automate the entire experiment.
-3. dns_mutate.py: controls topology creating and hosts pinging. 4. result folder: created after an experiment, store all results.
+3. dns_mutate.py: controls topology creating and hosts pinging. 
+4. result folder: created after an experiment, store all results.
 
 Requirements
 ================
@@ -18,8 +19,8 @@ Run
 ================
 1. Automated running: cd to the submitted folder and do
 sudo ./run all <location of pox.py>.
-For example: if the pox.py is in /home/mininet/pox, then the command is sudo ./run all /home/mininet/pox This will: (i) copies binh controller.py to /home/mininet/POX/pox/samples (ii) run the dns mutate.py script to generate results in the result folder.
-2. Manual running:
+For example: if the pox.py is in /home/mininet/pox, then the command is: sudo ./run all /home/mininet/pox This will: (i) copies binh controller.py to /home/mininet/POX/pox/samples (ii) run the dns mutate.py script to generate results in the result folder.
+2. Manual running (if "somehow" the automated running doesn't work)
 (a) Copy binh controller.py to POX’s samples directory. 
 (b) Run sudo ./dns mutate.py.
 (c) The results are in result folder.
