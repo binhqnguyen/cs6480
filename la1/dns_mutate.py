@@ -37,8 +37,9 @@ def do_ping(net):
 	atk_2.cmd("tcpdump -X -i h2-eth0 > "+result_dir+"atk_2.tcpdump 2>&1 &")
 	protected_host.cmd("tcpdump -X -i h3-eth0 > "+result_dir+"protected_host.tcpdump 2>&1 &")
 	time.sleep(2)	#wait for tcpdumps
-	print "Attackers pinging the protected host ...\n"
+	print "Attacker 1 pinging the protected host: h1 ping -c 5 \"target\" ...\n"
 	atk_1.cmd("ping -c 5 \"target\" > "+result_dir+"atk_1_ping.result")
+	print "Attacker 2 pinging the protected host: h2 ping -c 5 \"target\" ...\n"
 	atk_2.cmd("ping -c 5 \"target\" > "+result_dir+"atk_2_ping.result")
 	switches[0].cmd("dpctl dump-flows tcp:127.0.0.1:6634 > "+result_dir+"flow-table.info")
 	time.sleep(2)	#wait for dpctl
