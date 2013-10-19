@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sudo rpm -i 'http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.2-2.el6.rf.x86_64.rpm'
+sudo rpm --import http://apt.sw.be/RPM-GPG-KEY.dag.txt
+
+sudo vim /etc/yum.repos.d/rpmforge.repo
+#enabled = 0 to enabled = 1 in ..extras
+
+sudo yum update git --skip-broken
+
+sudo yum clean all
