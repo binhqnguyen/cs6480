@@ -1,10 +1,4 @@
 #!/bin/bash
-#install screen
-sudo yum -y install ncurses-devel texinfo pam-devel libtool
-sudo rpmbuild --rebuild screen-4.0.2-5.src.rpm
-sudo rpm -ivh /usr/src/redhat/RPMS/i386/screen-4.0.2-5.src.rpm
-yum -y install ncurses-devel texinfo pam-devel libtool
-
 sudo rpm -i 'http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.2-2.el6.rf.x86_64.rpm'
 sudo rpm --import http://apt.sw.be/RPM-GPG-KEY.dag.txt
 
@@ -14,3 +8,10 @@ sudo vim /etc/yum.repos.d/rpmforge.repo
 sudo yum update git --skip-broken
 
 sudo yum clean all
+
+#install screen
+#sudo yum -y install ncurses-devel texinfo pam-devel libtool
+#sudo rpmbuild --rebuild screen-4.0.2-5.src.rpm
+#sudo rpm -ivh /usr/src/redhat/RPMS/i386/screen-4.0.2-5.src.rpm
+
+
