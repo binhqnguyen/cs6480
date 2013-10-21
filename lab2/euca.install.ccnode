@@ -20,7 +20,7 @@ if [[ "$kvm_permission" != *crw-rw-rw-* || "$kvm_permission" != *root* ]]; then
 fi
 
 #clc node: (9)
-yum install eucalyptus-cloud
+sudo yum install eucalyptus-cloud
 
 
 
