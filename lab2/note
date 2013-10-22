@@ -2,7 +2,8 @@
 2.phy_intf and modify ifcfg files.
 3.deploy_ifcfg.
 4.start CLC,Walrus,CC: *.start. (NCs have not started yet).
-5.register:
-	run walrus.register and cc.register on CLC: root@10.1.1.3/4 doesn't have access. Should be binh6480@10.1.1.3/4 or root@10.1.1.3/4 should allowed.
-	run nc_s.register on CC.
+5.register: (Passed)
+	- enable root account first.
+	- Use the root's pwd to run walrus.register and cc.register on CLC.
+	- run nc_s.register on CC (error, could be permission issue, details in .log file)
 
