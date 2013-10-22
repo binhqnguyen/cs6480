@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#Register Walrus. Run this on CLC.
+if [ "$1" == "" ]; then
+	echo "Usage: ./walrus.register <walrus_IP_address> <walrus_name>(walrus-[hostname])."
+	exit
+fi
+
+
+echo "Registering Walrus: IP=$1, Name=$2..."
+sudo /usr/sbin/euca_conf --register-walrus --partition walrus --host $1 --component $2
+

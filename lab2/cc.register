@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#Register CC. Run this on CLC.
+if [ "$1" == "" ]; then
+	echo "Usage: ./cc.register <partition_name> (clusterXX) <CC_IP_Address> <CC_name>(cc-ipaddress)."
+	exit
+fi
+
+
+echo "Registering CC: Partition_name=$1, IP=$2, Name=$3..."
+sudo /usr/sbin/euca_conf --register-cluster --partition $1 --host $2 --component $3
+

@@ -9,7 +9,7 @@ sudo yum install http://downloads.eucalyptus.com/software/eucalyptus/3.3/centos/
 #yum install http://downloads.eucalyptus.com/software/eucalyptus/3.3/centos/6/x86_64/elrepo-release-6.noarch.rpm
 #nc node: (8)
 #8a.
-sudo yum install eucalyptus-nc
+sudo yum install eucalyptus-cc
 #8b
 kvm_permission=$(ls -l /dev/kvm)
 if [[ "$kvm_permission" != *crw-rw-rw-* || "$kvm_permission" != *root* ]]; then
