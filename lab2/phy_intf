@@ -1,3 +1,7 @@
 #!/bin/bash
-cat /var/emulab/boot/tmcc/ifconfig
-cat /var/emulab/boot/tmcc/ifconfig | awk '{split($5,a,"="); system("/usr/local/etc/emulab/findif" " "a[2]"")}' 
+if [ "$1" == "" ]; then
+	cat /var/emulab/boot/tmcc/ifconfig | awk '{split($5,a,"="); system("/usr/local/etc/emulab/findif" " "a[2]"")}' 
+else
+	cat /var/emulab/boot/tmcc/ifconfig | awk '{split($5,a,"="); system("/usr/local/etc/emulab/findif" " "a[2]"")}' 
+	cat /var/emulab/boot/tmcc/ifconfig
+fi

@@ -1,0 +1,2 @@
+#!/bin/bash
+eustore-install-image -b centos-testbucket -i 1483421470 -k kvm

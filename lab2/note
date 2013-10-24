@@ -1,9 +1,19 @@
 1.install: euca.install.*
-2.phy_intf and modify ifcfg files.
-3.deploy_ifcfg.
+2.3 now converged to: run generate_ifcfg*.
+	2.phy_intf and modify ifcfg files.
+	3.deploy_ifcfg.
 4.start CLC,Walrus,CC: *.start. (NCs have not started yet).
 5.register: (Passed)
 	- enable root account first.
 	- Use the root's pwd to run walrus.register and cc.register on CLC.
-	- run nc_s.register on CC (error, could be permission issue, details in .log file)
-
+	- Register NC on CC using nc_s.register
+6.erase and reinstall kvm, libvirt:
+	reinstall_kvm
+  Reinstall eucalyptus on nc node also using 
+	euca.install.ncnode
+7.start nc using nc.start.
+8.create admin credential using gen_adm_cren
+9.Download image from EUstore using create_img
+10.create key pairs using create_keypair
+11.Authorize network access using authorize_access
+12.Launch instance using ./launch_instance

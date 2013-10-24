@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Create a keypair ...."
+euca-create-keypair alice-keypair > alice-keypair.private 
+echo "Changing permission for the private key..."
+chmod 0600 alice-keypair.private
+
+echo "System public keys:"
+euca-describe-keypairs
+
+
+

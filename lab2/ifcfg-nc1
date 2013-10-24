@@ -1,0 +1,3 @@
+DEVICE=em4
+ONBOOT=yes
+BRIDGE=br0

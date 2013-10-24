@@ -1,0 +1,8 @@
+#!/bas/bin
+
+echo "Copying eucalyptuc.conf to /etc/eucalyptus/  ..."
+sudo cp eucalyptus.conf /etc/eucalyptus/
+
+#sudo perl -pi -e 
+#'s/::MaxPackets \"100\"/::MaxPackets \"20\"/g' 
+

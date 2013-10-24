@@ -1,14 +1,10 @@
 #!/bin/bash
 #Kill eucalyptus-cloud if is running
-echo "Killing runing eucalyptus-cloud ..."
-sudo killall eucalyptus-cloud
 
 #Init CLC:
 init_out=$(sudo /usr/sbin/euca_conf --initialize)
 if [ "$init_out" != *succeeded* ]; then 
-	echo "Might be problems with CLC init:"
 	echo "---->Output: $init_out"
-	exit
 fi
 
 #Start CLC:

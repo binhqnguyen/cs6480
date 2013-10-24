@@ -1,0 +1,25 @@
+#!/bin/bash
+
+device_name=$(./phy_intf)
+
+cfg_file=ifcfg-$device_name
+
+
+echo "Creating $cfg_file.nc1 ..."
+
+echo "DEVICE=$device_name
+ONBOOT=yes
+BRIDGE=br0" > $cfg_file
+
+echo "Copying $cfg_file to /etc/sysconfig/network-scrip
+ts ..."
+cp $cfg_file $cfg_file.nc1
+sudo mv $cfg_file /etc/sysconfig/network-scripts/
+
+echo "Copying ifcfg-br0 to /etc/sysconfig/network-scripts ..."
+sudo cp ifcfg-br0 /etc/sysconfig/network-scripts/
+
+
+echo "Restarting service network..."
+sudo service network restart
+ 

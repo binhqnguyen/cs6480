@@ -1,0 +1,6 @@
+#!/bin/bash
+sudo /usr/sbin/euca_conf --get-credentials admin.zip
+
+mkdir admin
+unzip admin.zip -d admin 
+source admin/eucarc

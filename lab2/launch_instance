@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "Launching an instance ..."
+img_name="emi-D5C13611"
+euca-run-instances $img_name -k bob-keypair
+
+echo "Instance status: "
+#euca-describe-instances <instance_id>

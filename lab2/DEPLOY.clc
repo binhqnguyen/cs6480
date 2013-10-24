@@ -1,0 +1,60 @@
+#!/bin/bash
+WALRUS_IP=10.1.1.2
+WALRUS_IP_STR=10-1-1-2
+
+CC_IP=10.1.1.3
+CC_IP_STR=10-1-1-3
+
+echo "=========================="
+echo "Installing clc node ..."
+echo "=========================="
+
+./euca.install.clcnode
+
+echo "=========================="
+echo "Configurating static network for CLC node ..."
+echo "=========================="
+
+./generate_ifcfg.clc
+
+
+echo "=========================="
+echo "Starting CLC node ..."
+echo "=========================="
+
+./clc.start
+
+echo "=========================="
+echo "Registering Walrus on CLC node..."
+echo "=========================="
+
+./walrus.register $WALRUS_IP walrus-$WALRUS_IP_STR
+
+echo "=========================="
+echo "Registering CC on CLC node..."
+echo "=========================="
+
+./cc.register cluster00 $CC_IP CC-$CC_IP_STR 
+
+echo "=========================="
+echo "Generate administrator crendentials..."
+echo "=========================="
+
+./gen_adm_cren
+
+echo "=========================="
+echo "Downloading and installing image 1483421470 from EuStore..."
+echo "=========================="
+
+eustore-install-image -b centos-testbucket -i 1483421470 -k kvm 
+
+echo "=========================="
+echo "List of images available on my cloud:"
+echo "=========================="
+
+euca-describe-images | grep centos-testbucket
+
+
+
+
+
