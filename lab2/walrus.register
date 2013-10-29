@@ -6,6 +6,8 @@ if [ "$1" == "" ]; then
 	exit
 fi
 
+echo "Deregistering Walrus-10-1-1-2..."
+sudo /usr/sbin/euca_conf --deregister-walrus walrus-10-1-1-2
 
 echo "Registering Walrus: IP=$1, Name=$2..."
 sudo /usr/sbin/euca_conf --register-walrus --partition walrus --host $1 --component $2

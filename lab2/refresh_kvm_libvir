@@ -1,4 +1,4 @@
-#!/bin/bas
+#!/bin/bash
 #preference: http://www.howtoforge.com/how-to-install-kvm-and-libvirt-on-centos-6.2-with-bridged-networking
 
 #Run this on NC node 
@@ -22,6 +22,9 @@ arc=$(lsmod | grep kvm)
 if [ "$arc" != *kvm* ]; then 
 	echo "Opps, there might be something wrong withlsmod | grep kvm ...."
 fi
+
+echo "Change group for /dev/kvm"
+sudo chgrp kvm /dev/kvm
 
 echo "Checking libvirtd status ..."
 service libvirtd status

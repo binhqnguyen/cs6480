@@ -3,35 +3,49 @@
 echo "=========================="
 echo "Installing nc node ..."
 echo "=========================="
-
-./euca.install.ncnode
+read a
+if [ "$a" != "n" ]; then
+	 ./euca.install.ncnode
+fi
 
 echo "=========================="
 echo "Configurating static network for NC node ..."
 echo "=========================="
-
-./generate_ifcfg.nc1
-
+read a
+if [ "$a" != "n" ]; then
+	./generate_ifcfg.nc1
+fi
 echo "=========================="
 echo "Enabling root account for NC node.."
 echo "=========================="
-
-./enable_root
-
+read a
+if [ "$a" != "n" ]; then
+	./enable_root
+fi
 
 echo "=========================="
 echo "Modifying /etc/eucalyptus/eucalyptus.conf to support KVM ..."
 echo "=========================="
-
-./modify_eucalyptus_conf
-
+read a
+if [ "$a" != "n" ]; then
+	./modify_eucalyptus_conf.nc1
+fi
 
 echo "=========================="
 echo "Starting NC node ..."
 echo "=========================="
+read a
+if [ "$a" != "n" ]; then
+	./refresh_kvm_libvir
+fi
 
-./nc.start 
-
+echo "=========================="
+echo "Starting NC node ..."
+echo "=========================="
+read a
+if [ "$a" != "n" ]; then
+	./nc.start 
+fi
 
 
 

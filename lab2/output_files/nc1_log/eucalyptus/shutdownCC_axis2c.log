@@ -1,0 +1,339 @@
+[Fri Oct  4 07:23:33 2013] [debug] phase.c(121) axis2_handler_t *request_uri_based_dispatcher added to the index 0 of the phase Transport
+[Fri Oct  4 07:23:33 2013] [debug] phase.c(121) axis2_handler_t *addressing_based_dispatcher added to the index 1 of the phase Transport
+[Fri Oct  4 07:23:33 2013] [debug] phase.c(121) axis2_handler_t *rest_dispatcher added to the index 0 of the phase Dispatch
+[Fri Oct  4 07:23:33 2013] [debug] phase.c(121) axis2_handler_t *soap_message_body_based_dispatcher added to the index 1 of the phase Dispatch
+[Fri Oct  4 07:23:33 2013] [debug] phase.c(121) axis2_handler_t *soap_action_based_dispatcher added to the index 2 of the phase Dispatch
+[Fri Oct  4 07:23:33 2013] [debug] phase.c(121) axis2_handler_t *dispatch_post_conditions_evaluator added to the index 0 of the phase PostDispatch
+[Fri Oct  4 07:23:33 2013] [debug] phase.c(121) axis2_handler_t *context_handler added to the index 1 of the phase PostDispatch
+[Fri Oct  4 07:23:33 2013] [debug] conf_builder.c(234) No custom dispatching order found. Continue with the default dispatching order
+[Fri Oct  4 07:23:33 2013] [debug] conf_builder.c(379) Module addressing found in axis2.xml
+[Fri Oct  4 07:23:33 2013] [debug] class_loader.c(140) /usr/lib64/axis2c/lib/libaxis2_http_sender.so shared lib loaded successfully
+[Fri Oct  4 07:23:33 2013] [debug] class_loader.c(140) /usr/lib64/axis2c/lib/libaxis2_http_receiver.so shared lib loaded successfully
+[Fri Oct  4 07:23:33 2013] [debug] dep_engine.c(1283) axis2_dep_engine_load_module_dll: DLL path is : /usr/lib64/axis2c/modules/addressing/libaxis2_mod_addr.so
+[Fri Oct  4 07:23:33 2013] [debug] class_loader.c(140) /usr/lib64/axis2c/modules/addressing/libaxis2_mod_addr.so shared lib loaded successfully
+[Fri Oct  4 07:23:33 2013] [debug] dep_engine.c(1283) axis2_dep_engine_load_module_dll: DLL path is : /usr/lib64/axis2c/modules/logging/libaxis2_mod_log.so
+[Fri Oct  4 07:23:33 2013] [debug] class_loader.c(140) /usr/lib64/axis2c/modules/logging/libaxis2_mod_log.so shared lib loaded successfully
+[Fri Oct  4 07:23:33 2013] [debug] desc_builder.c(777) Input action mapping found http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT
+[Fri Oct  4 07:23:33 2013] [debug] desc_builder.c(777) Input action mapping found http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/SCT
+[Fri Oct  4 07:23:33 2013] [debug] dep_engine.c(1283) axis2_dep_engine_load_module_dll: DLL path is : /usr/lib64/axis2c/modules/rahas/libmod_rahas.so
+[Fri Oct  4 07:23:33 2013] [debug] class_loader.c(140) /usr/lib64/axis2c/modules/rahas/libmod_rahas.so shared lib loaded successfully
+[Fri Oct  4 07:23:33 2013] [debug] dep_engine.c(1283) axis2_dep_engine_load_module_dll: DLL path is : /usr/lib64/axis2c/modules/rampart/libmod_rampart.so
+[Fri Oct  4 07:23:33 2013] [debug] class_loader.c(140) /usr/lib64/axis2c/modules/rampart/libmod_rampart.so shared lib loaded successfully
+[Fri Oct  4 07:23:33 2013] [debug] svc_builder.c(318) DLL path is : /usr/lib64/axis2c/services/EucalyptusCC/libEucalyptusCC.so
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(377) Module rampart will be engaged to EucalyptusCC
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(139) Service name is : EucalyptusCC
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] svc_builder.c(318) DLL path is : /usr/lib64/axis2c/services/EucalyptusGL/libEucalyptusGL.so
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingInHandler to phase Transport
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(222) svc name is:EucalyptusGL
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(139) Service name is : EucalyptusGL
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : GetKeys
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(222) svc name is:EucalyptusCC
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(139) Service name is : EucalyptusCC
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : DetachVolume
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : GetConsoleOutput
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : DisableService
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : DescribeServices
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : DescribeInstances
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : AssignAddress
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : ConfigureNetwork
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : ShutdownService
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : AttachVolume
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : DescribeSensors
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : UnassignAddress
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : ModifyNode
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : BundleInstance
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : StopNetwork
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : MigrateInstances
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : TerminateInstances
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : RebootInstances
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : CancelBundleTask
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : BundleRestartInstance
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : CreateImage
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : StopService
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : StartNetwork
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : EnableService
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : DescribeResources
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : RunInstances
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : DescribePublicAddresses
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : DescribeNetworks
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(1123) Operation name is : StartService
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [info]  [rampart][rampart_mod] rampart_mod initialized
+[Fri Oct  4 07:23:33 2013] [info]  [rahas]Rahas module initialized
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(139) Service name is : __ANONYMOUS_SERVICE__
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(723) Module name is:addressing
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(2058) Trying to add this handler AddressingInHandler to system pre defined phases , but those handlers are already added to global chain which run irrespective of the service
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(723) Module name is:addressing
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(723) Module name is:addressing
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(723) Module name is:addressing
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(723) Module name is:addressing
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(2058) Trying to add this handler AddressingInHandler to system pre defined phases , but those handlers are already added to global chain which run irrespective of the service
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(723) Module name is:addressing
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(723) Module name is:addressing
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(723) Module name is:addressing
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(723) Module name is:addressing
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(2058) Trying to add this handler AddressingInHandler to system pre defined phases , but those handlers are already added to global chain which run irrespective of the service
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(723) Module name is:addressing
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(723) Module name is:addressing
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(723) Module name is:addressing
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(377) Module rampart will be engaged to EucalyptusCC
+[Fri Oct  4 07:23:33 2013] [debug] phase_resolver.c(139) Service name is : EucalyptusCC
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartInHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase Security
+[Fri Oct  4 07:23:33 2013] [debug] phase_holder.c(139) Add handler RampartOutHandler to phase MessageOut
+[Fri Oct  4 07:23:33 2013] [debug] op_client.c(888) Start:axis2_op_client_infer_transport
+[Fri Oct  4 07:23:33 2013] [debug] op_client.c(954) End:axis2_op_client_infer_transport
+[Fri Oct  4 07:23:33 2013] [debug] phase.c(210) Invoke the handler AddressingOutHandler within the phase MessageOut
+[Fri Oct  4 07:23:33 2013] [info]  Starting addressing out handler
+[Fri Oct  4 07:23:33 2013] [debug] phase.c(210) Invoke the handler RampartOutHandler within the phase Security
+[Fri Oct  4 07:23:33 2013] [warning] msg_ctx.c(1403) RampartClientConfiguration not set in message context
+[Fri Oct  4 07:23:33 2013] [debug] rampart_sec_header_builder.c(474) [rampart][shb] Building Timestamp Token
+[Fri Oct  4 07:23:33 2013] [debug] rampart_sec_header_builder.c(475) [rampart][shb] Using default timeToLive value 300
+[Fri Oct  4 07:23:33 2013] [debug] rampart_sec_header_builder.c(597) [rampart][shb] Asymmetric Binding. 
+[Fri Oct  4 07:23:33 2013] [debug] rampart_context.c(2258) [rampart][rampart_context] Including the body for encryption/sign.
+[Fri Oct  4 07:23:33 2013] [debug] axiom.c(129) [rampart]Checking node Security for Timestamp
+[Fri Oct  4 07:23:33 2013] [debug] axiom.c(129) [rampart]Checking node Timestamp for Timestamp
+[Fri Oct  4 07:23:33 2013] [error] key_mgr.c(278) [rampart][rampart_signature] Certificate cannot be loaded from the file.
+[Fri Oct  4 07:23:33 2013] [error] rampart_signature.c(853) [rampart][rampart_signature] Cannot get certificate
+[Fri Oct  4 07:23:33 2013] [error] rampart_sec_header_builder.c(131) [rampart][shb] Signing failed. ERROR
+[Fri Oct  4 07:23:33 2013] [error] rampart_sec_header_builder.c(601) [rampart][shb] Asymmetric Binding failed
+[Fri Oct  4 07:23:33 2013] [error] rampart_out_handler.c(144) [rampart][rampart_out_handler] Security header building failed.
+[Fri Oct  4 07:23:33 2013] [error] phase.c(233) Handler RampartOutHandler invoke failed within phase Security
+[Fri Oct  4 07:23:33 2013] [error] engine.c(696) Invoking phase Security failed

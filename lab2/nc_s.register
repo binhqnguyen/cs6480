@@ -4,4 +4,7 @@ if [ "$1" == "" ]; then
 	echo "Usage: ./nc_s.register \"<list of NCs' IPs>\" (don't forget the \"quote\")"
 	exit
 fi
+echo "Deregistering"
+
+sudo /usr/sbin/euca_conf --deregister-nodes $1
 sudo /usr/sbin/euca_conf --register-nodes $1

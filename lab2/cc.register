@@ -6,6 +6,8 @@ if [ "$1" == "" ]; then
 	exit
 fi
 
+echo "Deregistering CC: Partition_name=$1, IP=$2, Name=$3..."
+sudo /usr/sbin/euca_conf --deregister-cluster -P $1 -C $3
 
 echo "Registering CC: Partition_name=$1, IP=$2, Name=$3..."
 sudo /usr/sbin/euca_conf --register-cluster --partition $1 --host $2 --component $3

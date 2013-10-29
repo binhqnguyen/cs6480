@@ -1,7 +1,10 @@
 #!/bin/bash
+if [ "$1" == "" ]; then
+	echo "Usage: /.launch_instance <image-name> <key-name (without \".private\")>"
+	exit
+fi
 echo "Launching an instance ..."
-img_name="emi-D5C13611"
-euca-run-instances $img_name -k bob-keypair
+euca-run-instances $1 -k $2
 
-echo "Instance status: "
+#echo "Instance status: "
 #euca-describe-instances <instance_id>

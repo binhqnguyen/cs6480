@@ -1,6 +1,17 @@
 #!/bin/bash
-sudo /usr/sbin/euca_conf --get-credentials admin.zip
 
 mkdir admin
-unzip admin.zip -d admin 
-source admin/eucarc
+
+rm -f admin.zip
+mv  cloud-cert.pem admin
+mv  euca2-admin*.pem admin
+mv eucarc admin
+mv iamrc admin
+mv jsse* admin
+
+sudo /usr/sbin/euca_conf --get-credentials admin.zip
+
+unzip admin.zip 
+
+source eucarc
+source eucarc

@@ -1,9 +1,14 @@
 #!/bin/bash
 
+if [ "$1" == "" ]; then 
+	echo "Usage: ./create_keypairs <key-name>"
+	exit
+fi
+
 echo "Create a keypair ...."
-euca-create-keypair alice-keypair > alice-keypair.private 
+euca-create-keypair $1 > $1.private 
 echo "Changing permission for the private key..."
-chmod 0600 alice-keypair.private
+chmod 0600 $1.private
 
 echo "System public keys:"
 euca-describe-keypairs
