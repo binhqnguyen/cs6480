@@ -11,7 +11,12 @@ Eucalyptus Static mode installation scripts
 2. Installation:
   - Run DEPLOY.cc/DEPLOY.clc/DEPLOY.nc1 on CC/CLC/NC1 respectively.
   - The DEPLOY.xx scripts will invoke other scripts to do their task (DEPLOY.xx are readable).
-  - Note: the step "loading admin credentials" has to be execute in a real terminal 
+  - Notes: 
+    + The step "loading admin credentials" has to be execute in a real terminal 
   (by typing the command "source eucarc" mannually in a terminal). Please do so if the DEPLOY.clc 
   script fails to load the credential.
+    + Since installations are running seperately on 3 different nodes, the order of installation 
+    is maintained by USER (it means user has to decide which steps on which node have to be done 
+    first before doing the other steps on other nodes). Refer to Eucalyptus installation guide.
+    http://www.eucalyptus.com/docs/eucalyptus/3.3/install-guide/
   
