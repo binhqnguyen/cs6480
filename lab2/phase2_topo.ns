@@ -1,0 +1,27 @@
+set ns [new Simulator]
+source tb_compat.tcl
+
+# Nodes
+set vm0 [$ns node]
+set vm1 [$ns node]
+#set othernode [$ns node]
+
+#set lan0 [$ns make-lan "$vm0 $vm1 $othernode " 100Mb 0ms]
+set lan0 [$ns make-lan "$vm0 $vm1" 100Mb 0ms]
+
+tb-set-node-os $vm0 XEN-STD
+tb-set-node-os $vm1 XEN-STD
+#tb-set-node-os $othernode UBUNTU12-64-STD
+
+tb-set-hardware $vm0 pcvm
+tb-set-hardware $vm1 pcvm
+#tb-set-hardware $othernode d710
+
+tb-set-node-failure-action $vm0 "nonfatal"
+tb-set-node-failure-action $vm1 "nonfatal"
+
+tb-set-node-memory-size $vm0 512
+tb-set-node-memory-size $vm1 512
+
+$ns rtproto Static
+$ns run
