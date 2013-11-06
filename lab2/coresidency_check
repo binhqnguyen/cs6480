@@ -1,0 +1,72 @@
+#!/bin/bash
+
+
+if [ "$1" == "" ]; then
+	echo "Usage: ./coresidency_check <name of VMs host> <name of trigger host>"
+fi 
+
+CORESIDENCY_HOST="$PC_NAME.emulab.net"
+TRIGGER_HOST="pcxxx.emulab.net"
+
+echo "======================="
+echo "Logging into the receiver ..."
+echo "======================="
+ssh -p 33850 CORESIDENCY_HOST
+
+
+echo "======================="
+echo "Installing apache server on receiver ..."
+echo "======================="
+sudo apt-get install apache2
+sudo /etc/init.d/apache2 start
+sudo service apache2 status
+
+echo "Verifying port 80 is open:"
+sudo netstat -tulpn | grep :80
+
+echo "======================="
+echo "Installing static webpage for apache server to /var/www/..."
+echo "======================="
+sudo cp <xx.html> /var/www/
+
+echo "Logging out of receiver..."
+logout
+
+#############Done with receiver############
+
+
+#############Doing stuff on the traffic trigger############
+echo "======================="
+echo "Logging into the web traffic trigger ..."
+echo "======================="
+ssh TRIGGER_HOST
+
+echo "Logging out of traffic trigger..."
+logout
+
+#############Doing monitoring on the coresider############
+echo "======================="
+echo "Logging into the coresider ..."
+echo "======================="
+ssh -p 33850 CORESIDENCY_HOST
+
+
+echo "======================="
+echo "Installing hdparm on coresider ..."
+echo "======================="
+sudo apt-get install hdparm
+sudo hdparm -tT /dev/sda
+
+
+
+echo "======================="
+echo "Coresider listening to disk performance ..."
+echo "======================="
+
+while [1]; do
+	echo $(date +%s)
+	echo $(sudo hdparm -tT /dev/sda) 
+done
+
+
+
