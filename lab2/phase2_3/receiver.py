@@ -24,8 +24,8 @@ import commands
 HIGH_DETECTION_RUN = 5 #How many times running the HIGH detection measurement.
 THRESHOLD = 0.85 #LOW if VALUE <= THRESHOLD * HIGH.
 BLOCK_COUNT = 15 #number of blocks written to disk to measure I/O
-HIGH_TH = 6 #fine-grained to coarse-grained converter
-LOW_TH = 14 #fine-grained to coarse-grained converter
+HIGH_TH = 7 #fine-grained to coarse-grained converter
+LOW_TH = 12 #fine-grained to coarse-grained converter
 #variables used for fine-grained to coarse-grained convertion.
 cnt_high = 0
 cnt_low = 0
