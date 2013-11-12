@@ -1,11 +1,9 @@
 #!/usr/bin/python
 #####################################################
 #- Sender of convert channel:
-#- Sender write data to disk to consume disk bandwidth 
-#and so receiver can measure disk read bandwidth to 
-#detect disk usage.
-#- Sender is instructed to write/idle using a binary string.
-#  For example: "1010" means "write-idle-write-idle."
+#- Sender read from disk to cause I/O 
+#- Sender is instructed to read/idle using a binary string.
+#  For example: "1010" means "read-idle-read-idle."
 #####################################################
 
 import sys
@@ -14,9 +12,9 @@ import subprocess
 import commands
 
 
-BLOCK_COUNT=150 #number of blocks to write to disk.
+BLOCK_COUNT=100 #number of blocks to write to disk.
 IDLE_PERIOD=4 #idles time in writing 0
-INTV=2 #receiver reads disk for each INTV seconds.
+INTV=8#receiver reads disk for each INTV seconds.
 
 if __name__ == "__main__":
 	if len(sys.argv) != 2:
@@ -24,24 +22,21 @@ if __name__ == "__main__":
 		sys.exit()
 	write_pattern = list(sys.argv[1])
 	
-	#Sender idles or writes to disk based on the write_pattern.
+	#Sender idles or read disk  on the write_pattern.
 	for i in write_pattern:
 		second = time.strftime("%S")
-		#print "t=%s" %second
-		while second % INTV != 0:
+		while int(second) % INTV != 0:
 			second = time.strftime("%S")
-			#spining
-		#Read once per 2 second.
+			#spining until next slot
 		#idle
 		if i == '0':
 			print "SENDER %s : writing 0 ..." % (time.strftime("%H:%M:%S"))
-			time.sleep(0.4) #slightly sleep to pass the interval
-		#writing to disk
+			time.sleep(INTV-0.5) #slightly sleep to pass the interval
+		#read from disk, meaning writing 1 to the channel
 		if i == '1':
 			print "SENDER %s : writing 1 ..." % (time.strftime("%H:%M:%S")) 
-			#status, dd_output = commands.getstatusoutput("sudo dd if=/dev/xvda2 of=/dev/null bs=1000k count=%s conv=fdatasync" % BLOCK_COUNT)
-			status, dd_output = commands.getstatusoutput("sudo dd if=/test/a.mov of=/dev/null conv=fdatasync")
-			print dd_output
+			status, hd_output = commands.getstatusoutput("sudo hdparm -t /dev/xvda2 | awk '/Timing/ {print $11}'")
+			hd_output
 	
 	print "SENDER %s : finished writing %s. Exit" % (time.strftime("%H:%M:%S"), str(write_pattern))
 	
