@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo mkdir /test
+sudo cp a.mov /test/

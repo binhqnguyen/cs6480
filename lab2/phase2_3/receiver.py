@@ -24,14 +24,15 @@ import commands
 HIGH_DETECTION_RUN = 5 #How many times running the HIGH detection measurement.
 THRESHOLD = 0.85 #LOW if VALUE <= THRESHOLD * HIGH.
 BLOCK_COUNT = 15 #number of blocks written to disk to measure I/O
-HIGH_TH = 6 #fine-grained to coarse-grained converter
-LOW_TH = 12 #fine-grained to coarse-grained converter
+HIGH_TH = 1 #fine-grained to coarse-grained converter
+LOW_TH = 1 #fine-grained to coarse-grained converter
 #variables used for fine-grained to coarse-grained convertion.
 cnt_high = 0
 cnt_low = 0
 sum_high = 0
 sum_low = 0
 counter = 0
+INTV=2 #receiver reads disk for each INTV seconds.
 
 #Detect coarse low/high from fine-grained disk measurement.
 def detect_low_high(OUTPUT,speed):
@@ -77,7 +78,8 @@ def high_detection():
 	#Run disk writing several times to find the HIGH and LOW threshold 
 	#of disk performance.
 	for i in range(0,HIGH_DETECTION_RUN):
-	        status, hd_output = commands.getstatusoutput("sudo dd if=/dev/zero of=/dev/xvda2 bs=1000k count=%s conv=fdatasync" % BLOCK_COUNT)
+	        #status, hd_output = commands.getstatusoutput("sudo dd if=/dev/zero of=/dev/xvda2 bs=1000k count=%s conv=fdatasync" % BLOCK_COUNT)
+	        status, hd_output = commands.getstatusoutput("sudo dd if=/test/a.mov of=/dev/null conv=fdatasync")
 		speed = hd_output[-9:-5]
 		d_time = hd_output[-21:-13]
 		
@@ -111,19 +113,30 @@ if __name__ == "__main__":
 	#compute low speed and read time
 	lows.append(float(highs[0])*float(THRESHOLD))
 	lows.append(float(highs[1])*float(THRESHOLD))
-	print "Training finished, High threshold= %s MB/s, low threshold= %s MB/s " % (highs[0],lows[0])
+	print "LOW/HIGH threshold = %s MB/s " % (lows[0])
 	print "Started listening:"
 	print "=================="
 	while 1:
-	        status, hd_output = commands.getstatusoutput("sudo dd if=/dev/zero of=/dev/xvda2 bs=1000k count=%s conv=fdatasync" % BLOCK_COUNT)
+	        #status, hd_output = commands.getstatusoutput("sudo dd if=/dev/zero of=/dev/xvda2 bs=1000k count=%s conv=fdatasync" % BLOCK_COUNT)
+		second = time.strftime("%S")
+		#print "t=%s" %second
+		while second % INTV != 0:
+			second = time.strftime("%S")
+			#spining
+		#Read disk every 2 second
+		status, hd_output = commands.getstatusoutput("sudo dd if=/test/a.mov of=/dev/null conv=fdatasync")
 		OUTPUT = 0 #no I/O detected
 		speed = hd_output[-9:-5]
 		d_time = hd_output[-21:-13]
 		
+
+
 		#set fine-grained output to 1 if disk performance is bad (or "someone" is writing). 
 		if float(speed) <= float(lows[0]):	#detected I/O from sender.
 			OUTPUT = 1
-		detect_low_high(OUTPUT, speed)
+
+		print "%s RECEIVER : speed= %s MB/s , OUTPUT = %s." % (time.strftime("%H:%M:%S"), str(speed), str(OUTPUT))
+		#detect_low_high(OUTPUT, speed)
 		
 		#terminate receiver when it runs for over 50 circles. 
 		if counter > 50:
