@@ -1,0 +1,43 @@
+CS6480 - lab assignment 2 - Covert channel communication.
+Binh Nguyen
+========================================================
+0. Accessing information:
+-------------------------
+VM0: 
+VM1:
+othernode:
+	
+1. Prerequisites:
+----------------
+	a. dd, hdparm installed on receiver/sender.
+	b. apache2 web server on sender.
+	Note: Both of the prerequisites are satisfied 
+	when doing Demo.
+2. Run:
+--------
+	a. Important: VM0 is the sender, VM1 is the receiver.
+	b. All scripts are located in /users/cs6480/binh6480/6480/lab2/phase2_3/
+	folder.
+	---------------------------
+	Phase 2:
+	--------
+	i. Log into receiver (VM1) and run "./receiver" 
+		*Note: the receiver's script has to run before 
+			sender's script. It takes the receiver 
+			sometime for preparation.
+	ii. After starting receiver's script, log into sender (VM0) 
+	and run "./sender 110011", where 110011 is the 
+	signal that the sender wants to send. The same string 
+	should appear at the receiver.
+		*Note: the signal might be not 100% correct 
+			due to the speed of the covert channel.
+			Multiple runs can be launched by the sender
+			using the same command above.
+	----------------------------
+	Phase 3:
+	---------
+	i. Log into the receiver (VM1) and run "./receiver".
+	ii. Log into the "othernode" and run "./trigger"
+	iii. The receiver should see "111111.." when the trigger 
+	starts and "000000..." otherwise.
+

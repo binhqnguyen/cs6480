@@ -31,7 +31,9 @@ if __name__ == "__main__":
 		#writing to disk
 		if i == '1':
 			print "SENDER %s : writing 1 ..." % (time.strftime("%H:%M:%S")) 
-			status, dd_output = commands.getstatusoutput("sudo dd if=/dev/zero of=/dev/xvda2 bs=1000k count=%s conv=fdatasync" % BLOCK_COUNT)
+			#status, dd_output = commands.getstatusoutput("sudo dd if=/dev/xvda2 of=/dev/null bs=1000k count=%s conv=fdatasync" % BLOCK_COUNT)
+			status, dd_output = commands.getstatusoutput("sudo dd if=/dev/xvda2/TBF.iso of=/dev/null")
+			print dd_output
 	
 	print "SENDER %s : finished writing %s. Exit" % (time.strftime("%H:%M:%S"), str(write_pattern))
 	

@@ -1,0 +1,14 @@
+#!/bin/bash
+#echo "Installing jmeter on trigger host.."
+#echo "Installing sun-java6-jdk"
+#sudo apt-get install python-software-properties
+#sudo apt-get install software-properties-common
+#sudo add-apt-repository ppa:webupd8team/java
+#sudo apt-get update 
+#sudo apt-get install oracle-java6-installer
+
+#THREAD=10
+#echo "Trigger host: start triggering loads on sender..."
+#echo "$THREAD threads are doing http gets..."
+#jmeter -n -t load-test.jmx
+

@@ -1,0 +1,19 @@
+#!/usr/bin/python
+#####################################################
+#- Trigger: download a big file located at the server 
+#  in a speficic manner to cause I/O loads on server.
+#  For example: 1011 means download-idle-download-download.
+#####################################################
+
+import sys
+import time
+import subprocess
+import commands
+
+TARGET_FILE="10.1.1.2/TBF.iso"
+DES="/proj/cs6480/binh_tmp"
+if __name__ == "__main__":
+	status, dd_output = commands.getstatusoutput("sudo wget %s %s"  % (TARGET_FILE,DES))
+	print "%s"%dd_output
+	status, dd_output = commands.getstatusoutput("sudo rm %s/TBF*"  % (DES))
+	
