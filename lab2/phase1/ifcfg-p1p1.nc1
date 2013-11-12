@@ -1,3 +1,0 @@
-DEVICE=p1p1
-ONBOOT=yes
-BRIDGE=br0

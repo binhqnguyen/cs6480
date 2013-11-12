@@ -1,2 +1,0 @@
-#!/bin/bash
-eustore-install-image -b fedora-testbucket -i 1190308149

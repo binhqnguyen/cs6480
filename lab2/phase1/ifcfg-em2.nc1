@@ -1,3 +1,0 @@
-DEVICE=em2
-ONBOOT=yes
-BRIDGE=br0

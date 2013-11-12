@@ -1,9 +1,0 @@
-#!/bin/bash
-
-NC_INF=$(./phy_intf)
-
-
-echo "Copying eucalyptuc.conf to /etc/eucalyptus/  ..."
-sudo cp eucalyptus.conf.nc1 /etc/eucalyptus/eucalyptus.conf
-
-
