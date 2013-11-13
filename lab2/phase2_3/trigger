@@ -1,7 +1,30 @@
 #!/bin/bash
-TARGET_FILE="10.1.1.2/TBF.iso"
 
-echo "Downloading a file from sender 10.1.1.2..."
-echo "=========================================="
-sudo wget $TARGET_FILE
-sudo rm TBF.iso 
+echo "**Trigger: 1010 ..."
+echo "Synchronizing. Please wait..."
+#Synchronize
+second=$(date +%s)
+while [ "$((second%60))" != "0" ]; do
+	second=$(date +%s)
+	sleep 1
+done
+
+#Start the process that periodically kills wget
+./watchdog &
+echo "TRIGGER: SENDING 1 ..."
+sudo wget 10.1.1.2/TBF1 -P /var/ &>-
+
+echo "TRIGGER: SENDING 0 ..."
+sleep 1m
+
+echo "TRIGGER: SENDING 1 ..."
+sudo wget 10.1.1.2/TBF2 -P /var/ &>-
+
+echo "TRIGGER: SENDING 0 ..."
+sleep 1m
+echo "DONE!"
+
+
+
+
+

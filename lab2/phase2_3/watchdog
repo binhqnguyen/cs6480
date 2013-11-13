@@ -1,0 +1,17 @@
+#!/bin/bash
+
+sleep 1m
+sudo pkill wget
+sudo rm -f /var/TBF* &
+
+sleep 1m
+
+
+sleep 1m
+sudo pkill wget
+sudo rm -f /var/TBF* &
+
+sleep 1m
+
+
+

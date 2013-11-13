@@ -1,10 +1,11 @@
 CS6480 - lab assignment 2 - Covert channel communication.
 Binh Nguyen
+Nov. 12th 2013
 ========================================================
 	
 1. Prerequisites:
 ----------------
-	a. hdparm installed on receiver/sender.
+	a. hdparm installed on receiver and sender.
 	b. apache2 web server on sender.
 	Note: Both of the prerequisites are satisfied 
 	when doing Demo.
@@ -28,7 +29,8 @@ Binh Nguyen
 	Phase 3:
 	---------
 	i. Log into the receiver (VM1) and run "./receiver.p3".
+		*Note: Step (ii) should happen when the receiver 
+			shows "Started listening" message.
 	ii. Log into the "othernode" and run "./trigger"
-	iii. The receiver should see "111111.." when the trigger 
-	starts and "000000..." otherwise.
-
+	iii. The "othernode" will trigger "1010" and this signal
+	should be seen on the receiver (1bit/minute).

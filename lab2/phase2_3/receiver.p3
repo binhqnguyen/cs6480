@@ -3,4 +3,4 @@
 WORKING_DIR=/users/binh6480/6480/lab2/phase2_3
 RECEIVER_TH="0.85"
 
-./receiver.py $RECEIVER_TH 6
+./receiver-p3.py $RECEIVER_TH 60
