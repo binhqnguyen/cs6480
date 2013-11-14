@@ -1,0 +1,17 @@
+\begin{thebibliography}{1}
+
+\bibitem{ristenpart2009hey}
+{\sc Ristenpart, T., Tromer, E., Shacham, H., and Savage, S.}
+\newblock Hey, you, get off of my cloud: exploring information leakage in
+  third-party compute clouds.
+\newblock In {\em Proceedings of the 16th ACM conference on Computer and
+  communications security\/} (2009), ACM, pp.~199--212.
+
+\bibitem{white2002integrated}
+{\sc White, B., Lepreau, J., Stoller, L., Ricci, R., Guruprasad, S., Newbold,
+  M., Hibler, M., Barb, C., and Joglekar, A.}
+\newblock An integrated experimental environment for distributed systems and
+  networks.
+\newblock {\em ACM SIGOPS Operating Systems Review 36}, SI (2002), 255--270.
+
+\end{thebibliography}
