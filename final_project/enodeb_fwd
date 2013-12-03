@@ -1,0 +1,6 @@
+#!/bin/bash
+OVS=192.168.100.128
+
+#iptables -t nat -A PREROUTING -i net_c -d 192.168.1.40 -p udp --dport 2152 -j DNAT --to $OVS
+iptables -t nat -A PREROUTING -i net_c -d 192.168.1.40 -p udp -j DNAT --to $OVS
+
