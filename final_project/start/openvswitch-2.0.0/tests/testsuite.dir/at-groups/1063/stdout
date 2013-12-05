@@ -1,0 +1,6 @@
+t=0: trigger 0 (immediate): [{"uuid":["uuid","<0>"]},{"uuid":["uuid","<1>"]}]
+t=5: new trigger 1
+t=10: trigger 2 (immediate): [{"uuid":["uuid","<2>"]}]
+t=10: trigger 1 (delayed): [{},{"count":2}]
+t=15: trigger 3 (immediate): [{"rows":[{"_uuid":["uuid","<2>"],"_version":["uuid","<3>"],"name":"two","number":2}]}]
+

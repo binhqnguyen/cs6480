@@ -1,0 +1,34 @@
+### t=1000 ###
+enable
+  in BACKOFF for 0 ms (0 ms backoff)
+
+# Connection fails quickly.
+run
+  should connect
+connect-failed ECONNREFUSED
+  in BACKOFF for 0 ms (1000 ms backoff)
+  0 successful connections out of 1 attempts, seqno 0
+
+# Back off for 1000 ms.
+run
+timeout
+  advance 1000 ms
+
+### t=2000 ###
+  in BACKOFF for 1000 ms (1000 ms backoff)
+
+# Connection fails quickly again.
+run
+  should connect
+connect-failed ECONNREFUSED
+  in BACKOFF for 0 ms (2000 ms backoff)
+  0 successful connections out of 2 attempts, seqno 0
+
+# Back off for 2000 ms.
+run
+timeout
+  advance 2000 ms
+
+### t=4000 ###
+  in BACKOFF for 2000 ms (2000 ms backoff)
+

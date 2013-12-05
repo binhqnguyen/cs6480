@@ -1,0 +1,5 @@
+OFPST_METER_FEATURES reply (OF1.3) (xid=0x2):
+max_meter:65536 max_bands:16 max_color:2
+band_types: drop dscp_remark
+capabilities: kbps pktps burst stats
+

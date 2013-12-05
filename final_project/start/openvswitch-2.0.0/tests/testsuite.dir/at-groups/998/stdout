@@ -1,0 +1,64 @@
+mutation  0:
+row 0: {"i":9223372036854775807}
+row 1: range error: Result of "+=" operation is out of range.
+row 2: {"i":9223372036854775806}
+row 3: range error: Result of "+=" operation is out of range.
+row 4: {"i":-1}
+row 5: range error: Result of "+=" operation is out of range.
+row 6: {"i":9223372033817775307}
+
+mutation  1:
+row 0: {"i":-9223372036854775808}
+row 1: {"i":-9223372036854775807}
+row 2: range error: Result of "+=" operation is out of range.
+row 3: {"i":-1}
+row 4: range error: Result of "+=" operation is out of range.
+row 5: {"i":-9223372033817775308}
+row 6: range error: Result of "+=" operation is out of range.
+
+mutation  2:
+row 0: range error: Result of "-=" operation is out of range.
+row 1: range error: Result of "-=" operation is out of range.
+row 2: {"i":9223372036854775807}
+row 3: range error: Result of "-=" operation is out of range.
+row 4: {"i":0}
+row 5: range error: Result of "-=" operation is out of range.
+row 6: {"i":9223372033817775308}
+
+mutation  3:
+row 0: {"i":-9223372036854775807}
+row 1: {"i":-9223372036854775806}
+row 2: {"i":-9223372036854775808}
+row 3: {"i":0}
+row 4: range error: Result of "-=" operation is out of range.
+row 5: {"i":-9223372033817775307}
+row 6: range error: Result of "-=" operation is out of range.
+
+mutation  4:
+row 0: no change
+row 1: {"i":3037000500}
+row 2: {"i":-3037000500}
+row 3: range error: Result of "*=" operation is out of range.
+row 4: range error: Result of "*=" operation is out of range.
+row 5: range error: Result of "*=" operation is out of range.
+row 6: range error: Result of "*=" operation is out of range.
+
+mutation  5:
+row 0: no change
+row 1: {"i":-1}
+row 2: {"i":1}
+row 3: {"i":-9223372036854775807}
+row 4: range error: Result of "/=" operation is out of range.
+row 5: {"i":-3037000500}
+row 6: {"i":3037000500}
+
+mutation  6:
+row 0: domain error: Division by zero.
+row 1: domain error: Division by zero.
+row 2: domain error: Division by zero.
+row 3: domain error: Division by zero.
+row 4: domain error: Division by zero.
+row 5: domain error: Division by zero.
+row 6: domain error: Division by zero.
+
+

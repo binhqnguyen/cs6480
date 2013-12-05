@@ -1,0 +1,1 @@
+test-ovsdb: syntax "{}": syntax error: Parsing table schema for table mytable failed: Required 'columns' member is missing.

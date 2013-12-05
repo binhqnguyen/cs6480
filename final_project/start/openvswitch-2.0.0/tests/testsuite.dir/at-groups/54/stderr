@@ -1,0 +1,2 @@
+ovs-ofctl: symmetric_l4,60,hrw,robot,slaves:1,2: unknown slave_type `robot'
+

@@ -1,0 +1,10 @@
+condition  0: T--
+condition  1: -TT
+condition  2: T--
+condition  3: -TT
+condition  4: -T-
+condition  5: T-T
+condition  6: -T-
+condition  7: T-T
+condition  8: --T
+

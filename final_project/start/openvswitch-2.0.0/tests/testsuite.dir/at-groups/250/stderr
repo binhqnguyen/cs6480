@@ -1,0 +1,15 @@
+ofp_util|INFO|normalization changed ofp_match, details:
+ofp_util|INFO| pre: dl_type=0x1234,nw_proto=5
+ofp_util|INFO|post: dl_type=0x1234
+ofp_util|INFO|normalization changed ofp_match, details:
+ofp_util|INFO| pre: arp,nw_tos=4
+ofp_util|INFO|post: arp
+ofp_util|INFO|normalization changed ofp_match, details:
+ofp_util|INFO| pre: dl_type=0x1234,nw_src=192.168.128.0/24
+ofp_util|INFO|post: dl_type=0x1234
+ofp_util|INFO|normalization changed ofp_match, details:
+ofp_util|INFO| pre: dl_type=0x1234,nw_dst=192.168.128.0/24
+ofp_util|INFO|post: dl_type=0x1234
+ofp_util|INFO|normalization changed ofp_match, details:
+ofp_util|INFO| pre: ip,nw_proto=21,tp_src=443
+ofp_util|INFO|post: ip,nw_proto=21

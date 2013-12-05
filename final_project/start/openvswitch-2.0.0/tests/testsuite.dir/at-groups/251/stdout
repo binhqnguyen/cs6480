@@ -1,0 +1,114 @@
+in_port=LOCAL
+
+bad ofp11_match: OFPBMC_BAD_VALUE
+
+dl_src=00:01:02:03:04:05
+
+dl_src=55:55:55:55:55:55/55:55:55:55:55:55
+
+dl_dst=00:01:02:03:04:05
+
+dl_dst=01:00:00:00:00:00/01:00:00:00:00:00
+
+dl_dst=00:01:02:03:04:05/fe:ff:ff:ff:ff:ff
+
+dl_dst=55:55:55:55:55:55/55:55:55:55:55:55
+
+in_port=1
+11: fa -> fe
+38: 03 -> 00
+
+dl_vlan=291
+
+vlan_tci=0x0000
+
+vlan_tci=0x0000
+11: f9 -> fd
+38: 05 -> 00
+
+vlan_tci=0x1000/0x1000
+
+bad ofp11_match: OFPBMC_BAD_VALUE
+
+dl_vlan_pcp=4
+
+dl_vlan=10,dl_vlan_pcp=6
+
+dl_type=0x1234
+
+ip,nw_tos=252
+
+bad ofp11_match: OFPBMC_BAD_VALUE
+
+ip,nw_proto=5
+
+arp,arp_op=2
+
+ip,nw_src=192.168.128.0/24
+
+ip,nw_src=128.160.128.0/165.165.165.165
+44: c0 -> 80
+45: a8 -> a0
+
+ip,nw_dst=192.168.128.0/24
+
+ip,nw_dst=128.160.128.0/165.165.165.165
+52: c0 -> 80
+53: a8 -> a0
+
+arp,arp_spa=192.168.128.0/24
+
+arp,arp_tpa=192.168.128.0/24
+
+tcp,tp_src=443
+
+tcp,tp_dst=443
+
+udp,tp_src=443
+
+icmp,icmp_type=5
+
+icmp,icmp_code=8
+
+udp,tp_src=443
+
+udp,tp_dst=443
+
+sctp
+
+sctp,tp_src=443
+
+sctp,tp_dst=443
+
+ip,nw_proto=21
+11: 97 -> d7
+60: 01 -> 00
+61: bb -> 00
+
+ip,nw_proto=22
+11: 57 -> d7
+62: 01 -> 00
+63: bb -> 00
+
+bad ofp11_match: OFPBMC_BAD_TAG
+
+bad ofp11_match: OFPBMC_BAD_TAG
+
+dl_type=0x1234
+10: 00 -> 03
+64: 12 -> 00
+65: 34 -> 00
+66: 56 -> 00
+67: 78 -> 00
+68: 5a -> 00
+
+metadata=0x1234567890abcdef
+
+metadata=0x5555555555555555/0x5555555555555555
+
+metadata=0x1234000090ab0000/0xffff0000ffff0000
+74: 56 -> 00
+75: 78 -> 00
+78: cd -> 00
+79: ef -> 00
+

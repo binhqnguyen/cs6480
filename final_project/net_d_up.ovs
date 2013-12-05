@@ -1,0 +1,4 @@
+#!/bin/bash
+NET_D_IP="192.168.4.101"
+
+sudo ifconfig net_d $NET_D_IP

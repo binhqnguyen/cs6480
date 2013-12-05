@@ -1,0 +1,3 @@
+OFPST_FLOW reply (OF1.2) (xid=0x52334504):
+ cookie=0x0, duration=0s, table=0, n_packets=0, n_bytes=0, priority=255,sctp actions=set_field:3334->sctp_src
+

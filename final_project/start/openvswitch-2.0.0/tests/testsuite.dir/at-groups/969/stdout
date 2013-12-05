@@ -1,0 +1,2 @@
+{"name":"mydb","tables":{"a":{"columns":{"x":{"ephemeral":true,"type":{"key":{"refTable":"b","type":"uuid"}}},"y":{"type":{"key":{"refTable":"a","type":"uuid"}}}}},"b":{"columns":{"aRef":{"type":{"key":{"refTable":"a","type":"uuid"}}}},"isRoot":true}},"version":"4.2.1"}
+

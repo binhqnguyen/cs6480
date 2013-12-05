@@ -1,0 +1,63 @@
+ 1 ->  2: disruption=0.50 (perfect=0.50); stddev/expected=0.0000
+ 2 ->  3: disruption=0.67 (perfect=0.33); stddev/expected=0.0049
+ 3 ->  4: disruption=0.75 (perfect=0.25); stddev/expected=0.0065
+ 4 ->  5: disruption=0.80 (perfect=0.20); stddev/expected=0.0065
+ 5 ->  6: disruption=0.83 (perfect=0.17); stddev/expected=0.0084
+ 6 ->  7: disruption=0.86 (perfect=0.14); stddev/expected=0.0042
+ 7 ->  8: disruption=0.88 (perfect=0.12); stddev/expected=0.0057
+ 8 ->  9: disruption=0.89 (perfect=0.11); stddev/expected=0.0119
+ 9 -> 10: disruption=0.90 (perfect=0.10); stddev/expected=0.0078
+10 -> 11: disruption=0.91 (perfect=0.09); stddev/expected=0.0071
+11 -> 12: disruption=0.92 (perfect=0.08); stddev/expected=0.0129
+12 -> 13: disruption=0.92 (perfect=0.08); stddev/expected=0.0121
+13 -> 14: disruption=0.93 (perfect=0.07); stddev/expected=0.0154
+14 -> 15: disruption=0.93 (perfect=0.07); stddev/expected=0.0173
+15 -> 16: disruption=0.94 (perfect=0.06); stddev/expected=0.0145
+16 -> 17: disruption=0.94 (perfect=0.06); stddev/expected=0.0136
+17 -> 18: disruption=0.94 (perfect=0.06); stddev/expected=0.0159
+18 -> 19: disruption=0.95 (perfect=0.05); stddev/expected=0.0194
+19 -> 20: disruption=0.95 (perfect=0.05); stddev/expected=0.0139
+20 -> 21: disruption=0.95 (perfect=0.05); stddev/expected=0.0171
+21 -> 22: disruption=0.95 (perfect=0.05); stddev/expected=0.0136
+22 -> 23: disruption=0.95 (perfect=0.04); stddev/expected=0.0166
+23 -> 24: disruption=0.96 (perfect=0.04); stddev/expected=0.0206
+24 -> 25: disruption=0.96 (perfect=0.04); stddev/expected=0.0227
+25 -> 26: disruption=0.96 (perfect=0.04); stddev/expected=0.0156
+26 -> 27: disruption=0.96 (perfect=0.04); stddev/expected=0.0188
+27 -> 28: disruption=0.96 (perfect=0.04); stddev/expected=0.0249
+28 -> 29: disruption=0.97 (perfect=0.03); stddev/expected=0.0203
+29 -> 30: disruption=0.97 (perfect=0.03); stddev/expected=0.0195
+30 -> 31: disruption=0.97 (perfect=0.03); stddev/expected=0.0170
+31 -> 32: disruption=0.97 (perfect=0.03); stddev/expected=0.0242
+32 -> 33: disruption=0.97 (perfect=0.03); stddev/expected=0.0230
+33 -> 34: disruption=0.97 (perfect=0.03); stddev/expected=0.0225
+34 -> 35: disruption=0.97 (perfect=0.03); stddev/expected=0.0153
+35 -> 36: disruption=0.97 (perfect=0.03); stddev/expected=0.0225
+36 -> 37: disruption=0.97 (perfect=0.03); stddev/expected=0.0211
+37 -> 38: disruption=0.97 (perfect=0.03); stddev/expected=0.0210
+38 -> 39: disruption=0.97 (perfect=0.03); stddev/expected=0.0261
+39 -> 40: disruption=0.98 (perfect=0.03); stddev/expected=0.0226
+40 -> 41: disruption=0.98 (perfect=0.02); stddev/expected=0.0268
+41 -> 42: disruption=0.98 (perfect=0.02); stddev/expected=0.0224
+42 -> 43: disruption=0.98 (perfect=0.02); stddev/expected=0.0217
+43 -> 44: disruption=0.98 (perfect=0.02); stddev/expected=0.0176
+44 -> 45: disruption=0.98 (perfect=0.02); stddev/expected=0.0221
+45 -> 46: disruption=0.98 (perfect=0.02); stddev/expected=0.0300
+46 -> 47: disruption=0.98 (perfect=0.02); stddev/expected=0.0305
+47 -> 48: disruption=0.98 (perfect=0.02); stddev/expected=0.0326
+48 -> 49: disruption=0.98 (perfect=0.02); stddev/expected=0.0282
+49 -> 50: disruption=0.98 (perfect=0.02); stddev/expected=0.0290
+50 -> 51: disruption=0.98 (perfect=0.02); stddev/expected=0.0301
+51 -> 52: disruption=0.98 (perfect=0.02); stddev/expected=0.0237
+52 -> 53: disruption=0.98 (perfect=0.02); stddev/expected=0.0218
+53 -> 54: disruption=0.98 (perfect=0.02); stddev/expected=0.0286
+54 -> 55: disruption=0.98 (perfect=0.02); stddev/expected=0.0319
+55 -> 56: disruption=0.98 (perfect=0.02); stddev/expected=0.0340
+56 -> 57: disruption=0.98 (perfect=0.02); stddev/expected=0.0273
+57 -> 58: disruption=0.98 (perfect=0.02); stddev/expected=0.0289
+58 -> 59: disruption=0.98 (perfect=0.02); stddev/expected=0.0343
+59 -> 60: disruption=0.98 (perfect=0.02); stddev/expected=0.0245
+60 -> 61: disruption=0.98 (perfect=0.02); stddev/expected=0.0317
+61 -> 62: disruption=0.98 (perfect=0.02); stddev/expected=0.0306
+62 -> 63: disruption=0.98 (perfect=0.02); stddev/expected=0.0305
+63 -> 64: disruption=0.98 (perfect=0.02); stddev/expected=0.0277

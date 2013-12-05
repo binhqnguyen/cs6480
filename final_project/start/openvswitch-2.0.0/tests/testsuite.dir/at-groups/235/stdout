@@ -1,0 +1,5 @@
+OFPT_ERROR (OF1.1) (xid=0x0): OFPBIC_UNSUP_INST
+OFPT_FEATURES_REPLY (OF1.1) (xid=0xeeff0011):
+(***truncated to 8 bytes from 52445***)
+00000000  02 06 cc dd ee ff 00 11-                        |........        |
+

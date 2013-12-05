@@ -1,0 +1,2 @@
+test.h:4: warning: struct wibble is 8 bytes long but declared as 12
+

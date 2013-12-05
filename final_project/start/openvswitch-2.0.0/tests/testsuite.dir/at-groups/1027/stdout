@@ -1,0 +1,15 @@
+insert 1 2 3:
+insert 2 2 3:
+commit:
+print:
+1: i=2, j=3
+2: i=2, j=3
+insert 3 5 6:
+delete 1:
+delete 3:
+print:
+2: i=2, j=3
+commit:
+print:
+2: i=2, j=3
+

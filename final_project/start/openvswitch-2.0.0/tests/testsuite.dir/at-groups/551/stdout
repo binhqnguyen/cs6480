@@ -1,0 +1,41 @@
+### t=1000 ###
+set-max-tries 1
+  1 tries left
+enable
+  in BACKOFF for 0 ms (0 ms backoff)
+  0 tries left
+
+# Connection succeeds.
+run
+  should connect
+connected
+  in ACTIVE for 0 ms (0 ms backoff)
+  created 1000, last activity 1000, last connected 1000
+  1 successful connections out of 1 attempts, seqno 1
+  connected
+  last connected 0 ms ago, connected 0 ms total
+
+# Send inactivity probe.
+timeout
+  advance 5000 ms
+
+### t=6000 ###
+  in ACTIVE for 5000 ms (0 ms backoff)
+run
+  should send probe
+  in IDLE for 0 ms (0 ms backoff)
+
+# Idle timeout kills connection.
+timeout
+  advance 5000 ms
+
+### t=11000 ###
+  in IDLE for 5000 ms (0 ms backoff)
+run
+  should disconnect
+disconnected
+  in VOID for 0 ms (1000 ms backoff)
+  1 successful connections out of 1 attempts, seqno 2
+  disconnected
+  disconnected at 11000 ms (0 ms ago)
+

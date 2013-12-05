@@ -1,0 +1,13 @@
+test-ovsdb: syntax "["b",">",true]": syntax error: Type mismatch: ">" operator may not be applied to column b of type boolean.
+test-ovsdb: syntax "["b",">=",false]": syntax error: Type mismatch: ">=" operator may not be applied to column b of type boolean.
+test-ovsdb: syntax "["b","<",false]": syntax error: Type mismatch: "<" operator may not be applied to column b of type boolean.
+test-ovsdb: syntax "["b","<=",false]": syntax error: Type mismatch: "<=" operator may not be applied to column b of type boolean.
+test-ovsdb: syntax "["s",">","a"]": syntax error: Type mismatch: ">" operator may not be applied to column s of type string.
+test-ovsdb: syntax "["s",">=","b"]": syntax error: Type mismatch: ">=" operator may not be applied to column s of type string.
+test-ovsdb: syntax "["s","<","c"]": syntax error: Type mismatch: "<" operator may not be applied to column s of type string.
+test-ovsdb: syntax "["s","<=","d"]": syntax error: Type mismatch: "<=" operator may not be applied to column s of type string.
+test-ovsdb: syntax "["u",">",["uuid","b10d28f7-af18-4a67-9e78-2a6394516c59"]]": syntax error: Type mismatch: ">" operator may not be applied to column u of type uuid.
+test-ovsdb: syntax "["u",">=",["uuid","9179ca6d-6d65-400a-b455-3ad92783a099"]]": syntax error: Type mismatch: ">=" operator may not be applied to column u of type uuid.
+test-ovsdb: syntax "["u","<",["uuid","ad0fa355-8b84-4a36-a4b5-b2c1bfd91758"]]": syntax error: Type mismatch: "<" operator may not be applied to column u of type uuid.
+test-ovsdb: syntax "["u","<=",["uuid","62315898-64e0-40b9-b26f-ff74225303e6"]]": syntax error: Type mismatch: "<=" operator may not be applied to column u of type uuid.
+

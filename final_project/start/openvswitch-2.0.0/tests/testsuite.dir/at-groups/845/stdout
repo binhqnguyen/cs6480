@@ -1,0 +1,7 @@
+constraint violation: "" is not one of the allowed values ([abc, def])
+constraint violation: ab is not one of the allowed values ([abc, def])
+"abc"
+"def"
+constraint violation: defg is not one of the allowed values ([abc, def])
+constraint violation: DEF is not one of the allowed values ([abc, def])
+

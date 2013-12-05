@@ -1,0 +1,5 @@
+lockfile|WARN|.a.~lock~: failed to lock file: Resource deadlock avoided
+lockfile|WARN|.b.~lock~: failed to lock file: Resource deadlock avoided
+lockfile|WARN|.b.~lock~: failed to lock file: Resource deadlock avoided
+lockfile|WARN|.a.~lock~: failed to lock file: Resource deadlock avoided
+

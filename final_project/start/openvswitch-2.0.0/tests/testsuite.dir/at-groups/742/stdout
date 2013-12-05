@@ -1,0 +1,1 @@
+syntax "{}": syntax error: Parsing ovsdb type failed: Required 'type' member is missing.

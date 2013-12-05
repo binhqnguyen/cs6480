@@ -1,0 +1,14 @@
+2013-12-04T06:56:10Z|00001|hmap|DBG|lib/ofp-msgs.c:1013: 6 nodes in bucket (128 nodes, 64 buckets)
+2013-12-04T06:56:10Z|00002|hmap|DBG|lib/ofp-msgs.c:1013: 6 nodes in bucket (256 nodes, 128 buckets)
+2013-12-04T06:56:10Z|00003|hmap|DBG|lib/ofp-msgs.c:1013: 7 nodes in bucket (512 nodes, 256 buckets)
+2013-12-04T06:56:10Z|00004|hmap|DBG|lib/ofp-msgs.c:1013: 8 nodes in bucket (512 nodes, 256 buckets)
+2013-12-04T06:56:10Z|00005|hmap|DBG|lib/ofp-msgs.c:1013: 6 nodes in bucket (512 nodes, 256 buckets)
+2013-12-04T06:56:10Z|00006|hmap|DBG|lib/ofp-msgs.c:1013: 7 nodes in bucket (512 nodes, 256 buckets)
+2013-12-04T06:56:10Z|00007|hmap|DBG|lib/ofp-msgs.c:1013: 7 nodes in bucket (1024 nodes, 512 buckets)
+2013-12-04T06:56:10Z|00008|hmap|DBG|lib/ofp-msgs.c:1013: 6 nodes in bucket (1024 nodes, 512 buckets)
+2013-12-04T06:56:10Z|00009|hmap|DBG|lib/ofp-msgs.c:1013: 6 nodes in bucket (1024 nodes, 512 buckets)
+2013-12-04T06:56:10Z|00010|hmap|DBG|lib/ofp-msgs.c:1013: 7 nodes in bucket (1024 nodes, 512 buckets)
+2013-12-04T06:56:10Z|00011|vconn|DBG|unix:fake-pvconn.0: sent (Success): OFPT_HELLO (xid=0x1):
+ version bitmap: 0x01
+2013-12-04T06:56:10Z|00012|vconn|DBG|unix:fake-pvconn.0: received: OFPT_ECHO_REQUEST (xid=0x12345678): 0 bytes of payload
+2013-12-04T06:56:10Z|00013|vconn|WARN|unix:fake-pvconn.0: received message while expecting hello: OFPT_ECHO_REQUEST (xid=0x12345678): 0 bytes of payload

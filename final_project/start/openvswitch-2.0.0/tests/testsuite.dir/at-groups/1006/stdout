@@ -1,0 +1,37 @@
+mutation  0:
+row 0: {"b":false}
+row 1: no change
+row 2: {"b":["set",[false,true]]}
+row 3: no change
+
+mutation  1:
+row 0: {"b":true}
+row 1: {"b":["set",[false,true]]}
+row 2: no change
+row 3: no change
+
+mutation  2:
+row 0: {"b":["set",[false,true]]}
+row 1: {"b":["set",[false,true]]}
+row 2: {"b":["set",[false,true]]}
+row 3: no change
+
+mutation  3:
+row 0: no change
+row 1: {"b":["set",[]]}
+row 2: no change
+row 3: {"b":true}
+
+mutation  4:
+row 0: no change
+row 1: no change
+row 2: {"b":["set",[]]}
+row 3: {"b":false}
+
+mutation  5:
+row 0: no change
+row 1: {"b":["set",[]]}
+row 2: {"b":["set",[]]}
+row 3: {"b":["set",[]]}
+
+

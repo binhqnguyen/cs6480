@@ -1,0 +1,4 @@
+lockfile|WARN|.file.~lock~: failed to lock file: Resource deadlock avoided
+lockfile|WARN|.file.~lock~: child does not inherit lock
+lockfile|WARN|.file.~lock~: cannot lock file because it is already locked by pid <pid>
+

@@ -1,0 +1,6 @@
+integer: OK
+real: OK
+boolean: OK
+string: OK
+uuid: OK
+

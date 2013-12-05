@@ -1,0 +1,31 @@
+mutation  0:
+row 0: {"r":1.79769313486232e+308}
+row 1: range error: Result of "+=" operation is out of range.
+row 2: {"r":0}
+
+mutation  1:
+row 0: {"r":-1.79769313486232e+308}
+row 1: {"r":0}
+row 2: range error: Result of "-=" operation is out of range.
+
+mutation  2:
+row 0: no change
+row 1: range error: Result of "*=" operation is out of range.
+row 2: range error: Result of "*=" operation is out of range.
+
+mutation  3:
+row 0: no change
+row 1: {"r":4.49423283715579e+307}
+row 2: {"r":-4.49423283715579e+307}
+
+mutation  4:
+row 0: no change
+row 1: range error: Result of "/=" operation is out of range.
+row 2: range error: Result of "/=" operation is out of range.
+
+mutation  5:
+row 0: domain error: Division by zero.
+row 1: domain error: Division by zero.
+row 2: domain error: Division by zero.
+
+

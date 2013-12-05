@@ -1,0 +1,2 @@
+ovs-ofctl: none of the usable flow formats (NXM,OXM,OpenFlow11) is among the allowed flow formats (OpenFlow10)
+

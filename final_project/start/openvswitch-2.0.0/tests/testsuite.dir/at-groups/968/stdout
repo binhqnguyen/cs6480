@@ -1,0 +1,2 @@
+{"name":"mydb","tables":{"a":{"columns":{"map":{"type":{"key":{"refTable":"b","type":"uuid"},"value":{"refTable":"a","type":"uuid"}}}}},"b":{"columns":{"aRef":{"type":{"key":{"refTable":"a","type":"uuid"}}}}}},"version":"4.2.1"}
+

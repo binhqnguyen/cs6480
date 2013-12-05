@@ -1,0 +1,3 @@
+OFPST_FLOW reply (OF1.2) (xid=0x52334509):
+ cookie=0x0, duration=0s, table=0, n_packets=0, n_bytes=0, priority=255,ip actions=set_field:192.168.74.122->ip_dst
+

@@ -1,0 +1,4 @@
+OFPST_TABLE reply (xid=0x1): 1 tables
+  0: classifier: wild=0x3fffff, max=1048576, active=11
+               lookup=0, matched=0
+

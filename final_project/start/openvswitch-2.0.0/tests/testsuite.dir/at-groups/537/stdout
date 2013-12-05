@@ -1,0 +1,47 @@
+### t=1000 ###
+enable
+  in BACKOFF for 0 ms (0 ms backoff)
+
+# Start connecting.
+run
+  should connect
+connecting
+  in CONNECTING for 0 ms (0 ms backoff)
+
+# Connect after 500 ms.
+advance 500
+
+### t=1500 ###
+  in CONNECTING for 500 ms (0 ms backoff)
+run
+connected
+  in ACTIVE for 0 ms (0 ms backoff)
+  created 1000, last activity 1000, last connected 1500
+  1 successful connections out of 1 attempts, seqno 1
+  connected
+  last connected 0 ms ago, connected 0 ms total
+
+# Send inactivity probe.
+timeout
+  advance 5000 ms
+
+### t=6500 ###
+  in ACTIVE for 5000 ms (0 ms backoff)
+run
+  should send probe
+  in IDLE for 0 ms (0 ms backoff)
+
+# Idle timeout kills connection.
+timeout
+  advance 5000 ms
+
+### t=11500 ###
+  in IDLE for 5000 ms (0 ms backoff)
+run
+  should disconnect
+disconnected
+  in BACKOFF for 0 ms (1000 ms backoff)
+  1 successful connections out of 1 attempts, seqno 2
+  disconnected
+  disconnected at 11500 ms (0 ms ago)
+

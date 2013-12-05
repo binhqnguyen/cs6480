@@ -1,0 +1,5 @@
+t=0: trigger 0 (immediate): [{"uuid":["uuid","<0>"]},{"uuid":["uuid","<1>"]}]
+t=5: new trigger 1
+t=10: trigger 2 (immediate): [{"uuid":["uuid","<2>"]}]
+t=10: trigger 1 (delayed): [{}]
+

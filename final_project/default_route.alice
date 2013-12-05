@@ -1,0 +1,6 @@
+#!/bin/bash
+DEFAULT_ROUTE="192.168.3.29" #an_lte
+
+
+sudo ip route add default via $DEFAULT_ROUTE 
+

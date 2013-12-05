@@ -1,0 +1,2 @@
+test-ovsdb: syntax "["i","+=",1]": constraint violation: Cannot mutate immutable column i in table mytable.
+

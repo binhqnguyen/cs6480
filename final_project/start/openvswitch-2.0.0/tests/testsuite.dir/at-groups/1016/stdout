@@ -1,0 +1,1 @@
+test-ovsdb: syntax "["i","bad"]": syntax error: bad is not a valid column name

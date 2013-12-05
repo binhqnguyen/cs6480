@@ -1,0 +1,1 @@
+syntax "{"maxLength":3,"minLength":5,"type":"string"}": syntax error: minLength exceeds maxLength

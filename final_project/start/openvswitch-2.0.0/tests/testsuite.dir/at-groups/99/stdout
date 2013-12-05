@@ -1,0 +1,5 @@
+OFPT_HELLO (xid=0x0):
+ version bitmap: 0x01
+ unknown data in hello:
+00000000  01 00 00 10 00 00 00 00-00 01 00 08 00 00 00 01 |................|
+

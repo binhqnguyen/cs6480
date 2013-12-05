@@ -1,0 +1,26 @@
+mutation  0:
+row 0: {"i":1}
+row 1: {"i":2}
+row 2: constraint violation: 3 is not in the valid range 0 to 2 (inclusive)
+
+mutation  1:
+row 0: constraint violation: -2 is not in the valid range 0 to 2 (inclusive)
+row 1: constraint violation: -1 is not in the valid range 0 to 2 (inclusive)
+row 2: {"i":0}
+
+mutation  2:
+row 0: no change
+row 1: constraint violation: 3 is not in the valid range 0 to 2 (inclusive)
+row 2: constraint violation: 6 is not in the valid range 0 to 2 (inclusive)
+
+mutation  3:
+row 0: no change
+row 1: {"i":0}
+row 2: {"i":0}
+
+mutation  4:
+row 0: no change
+row 1: no change
+row 2: {"i":0}
+
+

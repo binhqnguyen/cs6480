@@ -1,0 +1,11 @@
+constraint violation: 0 is not one of the allowed values ([1, 6, 8, 10])
+1
+constraint violation: 2 is not one of the allowed values ([1, 6, 8, 10])
+constraint violation: 3 is not one of the allowed values ([1, 6, 8, 10])
+6
+constraint violation: 7 is not one of the allowed values ([1, 6, 8, 10])
+8
+constraint violation: 9 is not one of the allowed values ([1, 6, 8, 10])
+10
+constraint violation: 11 is not one of the allowed values ([1, 6, 8, 10])
+

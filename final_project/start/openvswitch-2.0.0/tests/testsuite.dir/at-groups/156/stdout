@@ -1,0 +1,5 @@
+OFPST_FLOW reply (OF1.2) (xid=0x2):
+ cookie=0x0, duration=3.023s, table=0, n_packets=1, n_bytes=98, ip,metadata=0,in_port=2,dl_dst=ca:da:ad:d6:0d:37,nw_tos=0 actions=output:2
+ cookie=0x0, duration=4.545s, table=0, n_packets=2, n_bytes=140, ip,metadata=0,in_port=2,dl_dst=52:54:00:c3:00:89,nw_tos=0 actions=output:2
+ cookie=0x0, duration=4.548s, table=0, n_packets=1, n_bytes=42, ip,metadata=0,in_port=2,dl_dst=52:54:00:97:00:69,nw_tos=0 actions=output:2
+

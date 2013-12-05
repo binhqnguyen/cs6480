@@ -1,0 +1,1 @@
+test-ovsdb: syntax "{"columns":{"a":{"ephemeral":true,"type":"integer"},"b":{"type":"string"}},"indexes":[["b","a"]]}": syntax error: ephemeral columns (such as a) may not be indexed

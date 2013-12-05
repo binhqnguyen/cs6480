@@ -1,0 +1,136 @@
+### t=1000 ###
+enable
+  in BACKOFF for 0 ms (0 ms backoff)
+
+# First connection attempt fails after 1000 ms.
+run
+  should connect
+connecting
+  in CONNECTING for 0 ms (0 ms backoff)
+run
+timeout
+  advance 1000 ms
+
+### t=2000 ###
+  in CONNECTING for 1000 ms (0 ms backoff)
+run
+  should disconnect
+connect-failed
+  in BACKOFF for 0 ms (1000 ms backoff)
+  0 successful connections out of 1 attempts, seqno 0
+
+# Back off for 1000 ms.
+timeout
+  advance 1000 ms
+
+### t=3000 ###
+  in BACKOFF for 1000 ms (1000 ms backoff)
+run
+  should connect
+
+# Second connection attempt fails after 1000 ms.
+connecting
+  in CONNECTING for 0 ms (1000 ms backoff)
+timeout
+  advance 1000 ms
+
+### t=4000 ###
+  in CONNECTING for 1000 ms (1000 ms backoff)
+run
+  should disconnect
+connect-failed
+  in BACKOFF for 0 ms (2000 ms backoff)
+  0 successful connections out of 2 attempts, seqno 0
+
+# Back off for 2000 ms.
+timeout
+  advance 2000 ms
+
+### t=6000 ###
+  in BACKOFF for 2000 ms (2000 ms backoff)
+run
+  should connect
+
+# Third connection attempt fails after 2000 ms.
+connecting
+  in CONNECTING for 0 ms (2000 ms backoff)
+timeout
+  advance 2000 ms
+
+### t=8000 ###
+  in CONNECTING for 2000 ms (2000 ms backoff)
+run
+  should disconnect
+connect-failed
+  in BACKOFF for 0 ms (4000 ms backoff)
+  0 successful connections out of 3 attempts, seqno 0
+
+# Back off for 4000 ms.
+timeout
+  advance 4000 ms
+
+### t=12000 ###
+  in BACKOFF for 4000 ms (4000 ms backoff)
+run
+  should connect
+
+# Third connection attempt fails after 4000 ms.
+connecting
+  in CONNECTING for 0 ms (4000 ms backoff)
+timeout
+  advance 4000 ms
+
+### t=16000 ###
+  in CONNECTING for 4000 ms (4000 ms backoff)
+run
+  should disconnect
+connect-failed
+  in BACKOFF for 0 ms (8000 ms backoff)
+  0 successful connections out of 4 attempts, seqno 0
+
+# Back off for 8000 ms.
+timeout
+  advance 8000 ms
+
+### t=24000 ###
+  in BACKOFF for 8000 ms (8000 ms backoff)
+run
+  should connect
+
+# Third connection attempt fails after 8000 ms.
+connecting
+  in CONNECTING for 0 ms (8000 ms backoff)
+timeout
+  advance 8000 ms
+
+### t=32000 ###
+  in CONNECTING for 8000 ms (8000 ms backoff)
+run
+  should disconnect
+connect-failed
+  in BACKOFF for 0 ms (8000 ms backoff)
+  0 successful connections out of 5 attempts, seqno 0
+
+# Back off for 8000 ms.
+timeout
+  advance 8000 ms
+
+### t=40000 ###
+  in BACKOFF for 8000 ms (8000 ms backoff)
+run
+  should connect
+
+# Fourth connection attempt fails after 8000 ms.
+connecting
+  in CONNECTING for 0 ms (8000 ms backoff)
+timeout
+  advance 8000 ms
+
+### t=48000 ###
+  in CONNECTING for 8000 ms (8000 ms backoff)
+run
+  should disconnect
+connect-failed
+  in BACKOFF for 0 ms (8000 ms backoff)
+  0 successful connections out of 6 attempts, seqno 0
+

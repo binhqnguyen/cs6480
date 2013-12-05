@@ -1,0 +1,1 @@
+test-ovsdb: syntax "{"name":"mydb","tables":{"x":{"columns":{"y":{"type":"integer"}}}},"version":"xxx"}": syntax error: schema version "xxx" not in format x.y.z

@@ -1,0 +1,4 @@
+row,action,name,number,_version
+<0>,old,"""five""",,"[""uuid"",""<1>""]"
+,new,"""FIVE""",5,"[""uuid"",""<2>""]"
+

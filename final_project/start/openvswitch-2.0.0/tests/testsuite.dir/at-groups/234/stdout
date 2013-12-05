@@ -1,0 +1,5 @@
+OFPT_ERROR (xid=0x0): OFPFMFC_OVERLAP
+OFPT_FEATURES_REPLY (xid=0xeeff0011):
+(***truncated to 8 bytes from 52445***)
+00000000  01 06 cc dd ee ff 00 11-                        |........        |
+

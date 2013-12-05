@@ -1,0 +1,228 @@
+at_fn_group_banner 1231 'ovsdb-idl.at:87' \
+  "simple idl, initially empty, various ops - C" "   " 77
+at_xfail=no
+(
+  $as_echo "1231. $at_setup_line: testing $at_desc ..."
+  $at_traceon
+
+
+   OVS_RUNDIR=`pwd`; export OVS_RUNDIR
+   { set +x
+$as_echo "$at_srcdir/ovsdb-idl.at:87: ovsdb-tool create db \$abs_srcdir/idltest.ovsschema"
+at_fn_check_prepare_dynamic "ovsdb-tool create db $abs_srcdir/idltest.ovsschema" "ovsdb-idl.at:87"
+( $at_check_trace; ovsdb-tool create db $abs_srcdir/idltest.ovsschema
+) >>"$at_stdout" 2>>"$at_stderr"
+at_status=$? at_failed=false
+$at_check_filter
+echo stderr:; cat "$at_stderr"
+echo stdout:; tee stdout <"$at_stdout"
+at_fn_check_status 0 $at_status "$at_srcdir/ovsdb-idl.at:87"
+$at_failed && at_fn_log_failure
+$at_traceon; }
+
+   { set +x
+$as_echo "$at_srcdir/ovsdb-idl.at:87: ovsdb-server '-vPATTERN:console:ovsdb-server|%c|%m' --detach --no-chdir --pidfile=\"\`pwd\`\"/pid --remote=punix:socket --unixctl=\"\`pwd\`\"/unixctl db"
+at_fn_check_prepare_notrace 'a `...` command substitution' "ovsdb-idl.at:87"
+( $at_check_trace; ovsdb-server '-vPATTERN:console:ovsdb-server|%c|%m' --detach --no-chdir --pidfile="`pwd`"/pid --remote=punix:socket --unixctl="`pwd`"/unixctl db
+) >>"$at_stdout" 2>>"$at_stderr"
+at_status=$? at_failed=false
+$at_check_filter
+echo stderr:; cat "$at_stderr"
+echo stdout:; cat "$at_stdout"
+at_fn_check_status 0 $at_status "$at_srcdir/ovsdb-idl.at:87"
+$at_failed && at_fn_log_failure
+$at_traceon; }
+
+
+   { set +x
+$as_echo "$at_srcdir/ovsdb-idl.at:87: test-ovsdb '-vPATTERN:console:test-ovsdb|%c|%m' -vjsonrpc -t10 idl unix:socket '[\"idltest\",
+      {\"op\": \"insert\",
+       \"table\": \"simple\",
+       \"row\": {\"i\": 1,
+               \"r\": 2.0,
+               \"b\": true,
+               \"s\": \"mystring\",
+               \"u\": [\"uuid\", \"84f5c8f5-ac76-4dbc-a24f-8860eb407fc1\"],
+               \"ia\": [\"set\", [1, 2, 3]],
+               \"ra\": [\"set\", [-0.5]],
+               \"ba\": [\"set\", [true]],
+               \"sa\": [\"set\", [\"abc\", \"def\"]],
+               \"ua\": [\"set\", [[\"uuid\", \"69443985-7806-45e2-b35f-574a04e720f9\"],
+                              [\"uuid\", \"aad11ef0-816a-4b01-93e6-03b8b4256b98\"]]]}},
+      {\"op\": \"insert\",
+       \"table\": \"simple\",
+       \"row\": {}}]' \\
+    '[\"idltest\",
+      {\"op\": \"update\",
+       \"table\": \"simple\",
+       \"where\": [],
+       \"row\": {\"b\": true}}]' \\
+    '[\"idltest\",
+      {\"op\": \"update\",
+       \"table\": \"simple\",
+       \"where\": [],
+       \"row\": {\"r\": 123.5}}]' \\
+    '[\"idltest\",
+      {\"op\": \"insert\",
+       \"table\": \"simple\",
+       \"row\": {\"i\": -1,
+               \"r\": 125,
+               \"b\": false,
+               \"s\": \"\",
+               \"ia\": [\"set\", [1]],
+               \"ra\": [\"set\", [1.5]],
+               \"ba\": [\"set\", [false]],
+               \"sa\": [\"set\", []],
+               \"ua\": [\"set\", []]}}]' \\
+    '[\"idltest\",
+      {\"op\": \"update\",
+       \"table\": \"simple\",
+       \"where\": [[\"i\", \"<\", 1]],
+       \"row\": {\"s\": \"newstring\"}}]' \\
+    '[\"idltest\",
+      {\"op\": \"delete\",
+       \"table\": \"simple\",
+       \"where\": [[\"i\", \"==\", 0]]}]' \\
+    'reconnect'"
+at_fn_check_prepare_notrace 'an embedded newline' "ovsdb-idl.at:87"
+( $at_check_trace; test-ovsdb '-vPATTERN:console:test-ovsdb|%c|%m' -vjsonrpc -t10 idl unix:socket '["idltest",
+      {"op": "insert",
+       "table": "simple",
+       "row": {"i": 1,
+               "r": 2.0,
+               "b": true,
+               "s": "mystring",
+               "u": ["uuid", "84f5c8f5-ac76-4dbc-a24f-8860eb407fc1"],
+               "ia": ["set", [1, 2, 3]],
+               "ra": ["set", [-0.5]],
+               "ba": ["set", [true]],
+               "sa": ["set", ["abc", "def"]],
+               "ua": ["set", [["uuid", "69443985-7806-45e2-b35f-574a04e720f9"],
+                              ["uuid", "aad11ef0-816a-4b01-93e6-03b8b4256b98"]]]}},
+      {"op": "insert",
+       "table": "simple",
+       "row": {}}]' \
+    '["idltest",
+      {"op": "update",
+       "table": "simple",
+       "where": [],
+       "row": {"b": true}}]' \
+    '["idltest",
+      {"op": "update",
+       "table": "simple",
+       "where": [],
+       "row": {"r": 123.5}}]' \
+    '["idltest",
+      {"op": "insert",
+       "table": "simple",
+       "row": {"i": -1,
+               "r": 125,
+               "b": false,
+               "s": "",
+               "ia": ["set", [1]],
+               "ra": ["set", [1.5]],
+               "ba": ["set", [false]],
+               "sa": ["set", []],
+               "ua": ["set", []]}}]' \
+    '["idltest",
+      {"op": "update",
+       "table": "simple",
+       "where": [["i", "<", 1]],
+       "row": {"s": "newstring"}}]' \
+    '["idltest",
+      {"op": "delete",
+       "table": "simple",
+       "where": [["i", "==", 0]]}]' \
+    'reconnect'
+) >>"$at_stdout" 2>>"$at_stderr"
+at_status=$? at_failed=false
+$at_check_filter
+echo stderr:; cat "$at_stderr"
+echo stdout:; tee stdout <"$at_stdout"
+at_fn_check_status 0 $at_status "$at_srcdir/ovsdb-idl.at:87"
+if $at_failed; then :
+  kill `cat pid`
+fi
+$at_failed && at_fn_log_failure
+$at_traceon; }
+
+   { set +x
+$as_echo "$at_srcdir/ovsdb-idl.at:87: sort stdout | \${PERL} \$srcdir/uuidfilt.pl"
+at_fn_check_prepare_notrace 'a ${...} parameter expansion' "ovsdb-idl.at:87"
+( $at_check_trace; sort stdout | ${PERL} $srcdir/uuidfilt.pl
+) >>"$at_stdout" 2>>"$at_stderr"
+at_status=$? at_failed=false
+$at_check_filter
+at_fn_diff_devnull "$at_stderr" || at_failed=:
+echo >>"$at_stdout"; $as_echo "000: empty
+001: {\"error\":null,\"result\":[{\"uuid\":[\"uuid\",\"<0>\"]},{\"uuid\":[\"uuid\",\"<1>\"]}]}
+002: i=0 r=0 b=false s= u=<2> ia=[] ra=[] ba=[] sa=[] ua=[] uuid=<1>
+002: i=1 r=2 b=true s=mystring u=<3> ia=[1 2 3] ra=[-0.5] ba=[true] sa=[abc def] ua=[<4> <5>] uuid=<0>
+003: {\"error\":null,\"result\":[{\"count\":2}]}
+004: i=0 r=0 b=true s= u=<2> ia=[] ra=[] ba=[] sa=[] ua=[] uuid=<1>
+004: i=1 r=2 b=true s=mystring u=<3> ia=[1 2 3] ra=[-0.5] ba=[true] sa=[abc def] ua=[<4> <5>] uuid=<0>
+005: {\"error\":null,\"result\":[{\"count\":2}]}
+006: i=0 r=123.5 b=true s= u=<2> ia=[] ra=[] ba=[] sa=[] ua=[] uuid=<1>
+006: i=1 r=123.5 b=true s=mystring u=<3> ia=[1 2 3] ra=[-0.5] ba=[true] sa=[abc def] ua=[<4> <5>] uuid=<0>
+007: {\"error\":null,\"result\":[{\"uuid\":[\"uuid\",\"<6>\"]}]}
+008: i=-1 r=125 b=false s= u=<2> ia=[1] ra=[1.5] ba=[false] sa=[] ua=[] uuid=<6>
+008: i=0 r=123.5 b=true s= u=<2> ia=[] ra=[] ba=[] sa=[] ua=[] uuid=<1>
+008: i=1 r=123.5 b=true s=mystring u=<3> ia=[1 2 3] ra=[-0.5] ba=[true] sa=[abc def] ua=[<4> <5>] uuid=<0>
+009: {\"error\":null,\"result\":[{\"count\":2}]}
+010: i=-1 r=125 b=false s=newstring u=<2> ia=[1] ra=[1.5] ba=[false] sa=[] ua=[] uuid=<6>
+010: i=0 r=123.5 b=true s=newstring u=<2> ia=[] ra=[] ba=[] sa=[] ua=[] uuid=<1>
+010: i=1 r=123.5 b=true s=mystring u=<3> ia=[1 2 3] ra=[-0.5] ba=[true] sa=[abc def] ua=[<4> <5>] uuid=<0>
+011: {\"error\":null,\"result\":[{\"count\":1}]}
+012: i=-1 r=125 b=false s=newstring u=<2> ia=[1] ra=[1.5] ba=[false] sa=[] ua=[] uuid=<6>
+012: i=1 r=123.5 b=true s=mystring u=<3> ia=[1 2 3] ra=[-0.5] ba=[true] sa=[abc def] ua=[<4> <5>] uuid=<0>
+013: reconnect
+014: i=-1 r=125 b=false s=newstring u=<2> ia=[1] ra=[1.5] ba=[false] sa=[] ua=[] uuid=<6>
+014: i=1 r=123.5 b=true s=mystring u=<3> ia=[1 2 3] ra=[-0.5] ba=[true] sa=[abc def] ua=[<4> <5>] uuid=<0>
+015: done
+" | \
+  $at_diff - "$at_stdout" || at_failed=:
+at_fn_check_status 0 $at_status "$at_srcdir/ovsdb-idl.at:87"
+if $at_failed; then :
+  kill `cat pid`
+fi
+$at_failed && at_fn_log_failure
+$at_traceon; }
+
+   cp pid savepid
+   { set +x
+$as_echo "$at_srcdir/ovsdb-idl.at:87: ovs-appctl -t \"\`pwd\`\"/unixctl -e exit"
+at_fn_check_prepare_notrace 'a `...` command substitution' "ovsdb-idl.at:87"
+( $at_check_trace; ovs-appctl -t "`pwd`"/unixctl -e exit
+) >>"$at_stdout" 2>>"$at_stderr"
+at_status=$? at_failed=false
+$at_check_filter
+echo stderr:; cat "$at_stderr"
+echo stdout:; cat "$at_stdout"
+at_fn_check_status 0 $at_status "$at_srcdir/ovsdb-idl.at:87"
+$at_failed && at_fn_log_failure
+$at_traceon; }
+
+   { set +x
+$as_echo "$at_srcdir/ovsdb-idl.at:87: ovs_wait_cond () { if kill -0 \`cat savepid\`; then return 1; else return 0; fi
+}
+ovs_wait"
+at_fn_check_prepare_notrace 'a `...` command substitution' "ovsdb-idl.at:87"
+( $at_check_trace; ovs_wait_cond () { if kill -0 `cat savepid`; then return 1; else return 0; fi
+}
+ovs_wait
+) >>"$at_stdout" 2>>"$at_stderr"
+at_status=$? at_failed=false
+$at_check_filter
+echo stderr:; cat "$at_stderr"
+echo stdout:; cat "$at_stdout"
+at_fn_check_status 0 $at_status "$at_srcdir/ovsdb-idl.at:87"
+if $at_failed; then :
+  kill `cat savepid`
+fi
+$at_failed && at_fn_log_failure
+$at_traceon; }
+
+     set +x
+  $at_times_p && times >"$at_times_file"
+) 5>&1 2>&1 7>&- | eval $at_tee_pipe
+read at_status <"$at_status_file"

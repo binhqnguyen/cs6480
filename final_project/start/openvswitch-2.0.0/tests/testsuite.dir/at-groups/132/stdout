@@ -1,0 +1,2 @@
+OFPT_FLOW_MOD (xid=0x0): ADD priority=65535,arp,in_port=1,vlan_tci=0x0000,dl_src=50:54:00:00:00:06,dl_dst=50:54:00:00:00:05,arp_spa=192.168.0.2,arp_tpa=192.168.0.1,arp_op=2 idle:5 buf:0x10e out_port:0 actions=output:3
+

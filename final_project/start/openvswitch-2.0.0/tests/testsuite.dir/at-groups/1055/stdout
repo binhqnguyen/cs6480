@@ -1,0 +1,10 @@
+[{"uuid":["uuid","<0>"]},{"uuid":["uuid","<1>"]},{"uuid":["uuid","<2>"]},{"uuid":["uuid","<3>"]}]
+[{"count":1},{"details":"cannot delete b row <0> because of 3 remaining reference(s)","error":"referential integrity violation"}]
+[{"details":"Attempted to store 0 elements in set of 1 to 2 integers.","error":"constraint violation"}]
+[{"count":1}]
+[{"count":1},{"details":"cannot delete b row <0> because of 2 remaining reference(s)","error":"referential integrity violation"}]
+[{"count":1}]
+[{"count":1},{"details":"cannot delete b row <0> because of 1 remaining reference(s)","error":"referential integrity violation"}]
+[{"count":1}]
+[{"count":1}]
+

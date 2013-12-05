@@ -1,0 +1,9 @@
+[{"uuid":["uuid","<0>"]}]
+[{"uuid":["uuid","<1>"]},{"details":"Transaction causes multiple rows in \"ordinals\" table to have identical values (1) for index on column \"number\".  First row, with UUID <0>, existed in the database before this transaction and was not modified by the transaction.  Second row, with UUID <1>, was inserted by this transaction.","error":"constraint violation"}]
+[{"uuid":["uuid","<2>"]},{"count":1}]
+[{"count":1},{"uuid":["uuid","<3>"]},{"uuid":["uuid","<4>"]},{"details":"Transaction causes multiple rows in \"ordinals\" table to have identical values (1) for index on column \"number\".  First row, with UUID <4>, was inserted by this transaction.  Second row, with UUID <3>, was inserted by this transaction.","error":"constraint violation"}]
+[{"uuid":["uuid","<5>"]}]
+[{"count":2},{"details":"Transaction causes multiple rows in \"ordinals\" table to have identical values (3) for index on column \"number\".  First row, with UUID <5>, had the following index values before the transaction: 2.  Second row, with UUID <2>, had the following index values before the transaction: 1.","error":"constraint violation"}]
+[{"count":1},{"count":1}]
+[{"count":2},{"uuid":["uuid","<6>"]},{"uuid":["uuid","<7>"]},{"rows":[{"name":"new one","number":1},{"name":"new two","number":2},{"name":"old one","number":10},{"name":"old two","number":20}]}]
+

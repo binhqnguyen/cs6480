@@ -1,0 +1,22 @@
+000: empty
+001: {"error":null,"result":[{"uuid":["uuid","b13e3e31-53ce-40cf-91ad-0a24a459d013"]},{"uuid":["uuid","c345ae7e-36bd-45df-b610-01e78e945057"]}]}
+002: i=1 r=2 b=true s=mystring u=84f5c8f5-ac76-4dbc-a24f-8860eb407fc1 ia=[1 2 3] ra=[-0.5] ba=[true] sa=[abc def] ua=[69443985-7806-45e2-b35f-574a04e720f9 aad11ef0-816a-4b01-93e6-03b8b4256b98] uuid=b13e3e31-53ce-40cf-91ad-0a24a459d013
+002: i=0 r=0 b=false s= u=00000000-0000-0000-0000-000000000000 ia=[] ra=[] ba=[] sa=[] ua=[] uuid=c345ae7e-36bd-45df-b610-01e78e945057
+003: {"error":null,"result":[{"count":2}]}
+004: i=1 r=2 b=true s=mystring u=84f5c8f5-ac76-4dbc-a24f-8860eb407fc1 ia=[1 2 3] ra=[-0.5] ba=[true] sa=[abc def] ua=[69443985-7806-45e2-b35f-574a04e720f9 aad11ef0-816a-4b01-93e6-03b8b4256b98] uuid=b13e3e31-53ce-40cf-91ad-0a24a459d013
+004: i=0 r=0 b=true s= u=00000000-0000-0000-0000-000000000000 ia=[] ra=[] ba=[] sa=[] ua=[] uuid=c345ae7e-36bd-45df-b610-01e78e945057
+005: {"error":null,"result":[{"count":2}]}
+006: i=1 r=123.5 b=true s=mystring u=84f5c8f5-ac76-4dbc-a24f-8860eb407fc1 ia=[1 2 3] ra=[-0.5] ba=[true] sa=[abc def] ua=[69443985-7806-45e2-b35f-574a04e720f9 aad11ef0-816a-4b01-93e6-03b8b4256b98] uuid=b13e3e31-53ce-40cf-91ad-0a24a459d013
+006: i=0 r=123.5 b=true s= u=00000000-0000-0000-0000-000000000000 ia=[] ra=[] ba=[] sa=[] ua=[] uuid=c345ae7e-36bd-45df-b610-01e78e945057
+007: {"error":null,"result":[{"uuid":["uuid","94002c20-e330-4aee-b76e-9595c2bea5aa"]}]}
+008: i=-1 r=125 b=false s= u=00000000-0000-0000-0000-000000000000 ia=[1] ra=[1.5] ba=[false] sa=[] ua=[] uuid=94002c20-e330-4aee-b76e-9595c2bea5aa
+008: i=1 r=123.5 b=true s=mystring u=84f5c8f5-ac76-4dbc-a24f-8860eb407fc1 ia=[1 2 3] ra=[-0.5] ba=[true] sa=[abc def] ua=[69443985-7806-45e2-b35f-574a04e720f9 aad11ef0-816a-4b01-93e6-03b8b4256b98] uuid=b13e3e31-53ce-40cf-91ad-0a24a459d013
+008: i=0 r=123.5 b=true s= u=00000000-0000-0000-0000-000000000000 ia=[] ra=[] ba=[] sa=[] ua=[] uuid=c345ae7e-36bd-45df-b610-01e78e945057
+009: {"error":null,"result":[{"count":2}]}
+010: i=-1 r=125 b=false s=newstring u=00000000-0000-0000-0000-000000000000 ia=[1] ra=[1.5] ba=[false] sa=[] ua=[] uuid=94002c20-e330-4aee-b76e-9595c2bea5aa
+010: i=1 r=123.5 b=true s=mystring u=84f5c8f5-ac76-4dbc-a24f-8860eb407fc1 ia=[1 2 3] ra=[-0.5] ba=[true] sa=[abc def] ua=[69443985-7806-45e2-b35f-574a04e720f9 aad11ef0-816a-4b01-93e6-03b8b4256b98] uuid=b13e3e31-53ce-40cf-91ad-0a24a459d013
+010: i=0 r=123.5 b=true s=newstring u=00000000-0000-0000-0000-000000000000 ia=[] ra=[] ba=[] sa=[] ua=[] uuid=c345ae7e-36bd-45df-b610-01e78e945057
+011: {"error":null,"result":[{"count":1}]}
+012: i=-1 r=125 b=false s=newstring u=00000000-0000-0000-0000-000000000000 ia=[1] ra=[1.5] ba=[false] sa=[] ua=[] uuid=94002c20-e330-4aee-b76e-9595c2bea5aa
+012: i=1 r=123.5 b=true s=mystring u=84f5c8f5-ac76-4dbc-a24f-8860eb407fc1 ia=[1 2 3] ra=[-0.5] ba=[true] sa=[abc def] ua=[69443985-7806-45e2-b35f-574a04e720f9 aad11ef0-816a-4b01-93e6-03b8b4256b98] uuid=b13e3e31-53ce-40cf-91ad-0a24a459d013
+013: reconnect

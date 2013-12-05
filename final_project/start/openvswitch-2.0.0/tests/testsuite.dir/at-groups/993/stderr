@@ -1,0 +1,27 @@
+test-ovsdb: unknown mutator: No mutator named xxx.
+test-ovsdb: syntax "["i","insert",1]": syntax error: Type mismatch: "insert" operator may not be applied to column i of type integer.
+test-ovsdb: syntax "["i","delete",2]": syntax error: Type mismatch: "delete" operator may not be applied to column i of type integer.
+test-ovsdb: syntax "["r","%=",0.5]": syntax error: Type mismatch: "%=" operator may not be applied to column r of type real.
+test-ovsdb: syntax "["r","insert",1.5]": syntax error: Type mismatch: "insert" operator may not be applied to column r of type real.
+test-ovsdb: syntax "["r","delete",2.5]": syntax error: Type mismatch: "delete" operator may not be applied to column r of type real.
+test-ovsdb: syntax "["b","+=",true]": syntax error: Type mismatch: "+=" operator may not be applied to column b of type boolean.
+test-ovsdb: syntax "["b","-=",false]": syntax error: Type mismatch: "-=" operator may not be applied to column b of type boolean.
+test-ovsdb: syntax "["b","*=",true]": syntax error: Type mismatch: "*=" operator may not be applied to column b of type boolean.
+test-ovsdb: syntax "["b","/=",false]": syntax error: Type mismatch: "/=" operator may not be applied to column b of type boolean.
+test-ovsdb: syntax "["b","%=",true]": syntax error: Type mismatch: "%=" operator may not be applied to column b of type boolean.
+test-ovsdb: syntax "["b","insert",false]": syntax error: Type mismatch: "insert" operator may not be applied to column b of type boolean.
+test-ovsdb: syntax "["b","delete",true]": syntax error: Type mismatch: "delete" operator may not be applied to column b of type boolean.
+test-ovsdb: syntax "["s","+=","a"]": syntax error: Type mismatch: "+=" operator may not be applied to column s of type string.
+test-ovsdb: syntax "["s","-=","b"]": syntax error: Type mismatch: "-=" operator may not be applied to column s of type string.
+test-ovsdb: syntax "["s","*=","c"]": syntax error: Type mismatch: "*=" operator may not be applied to column s of type string.
+test-ovsdb: syntax "["s","/=","d"]": syntax error: Type mismatch: "/=" operator may not be applied to column s of type string.
+test-ovsdb: syntax "["s","%=","e"]": syntax error: Type mismatch: "%=" operator may not be applied to column s of type string.
+test-ovsdb: syntax "["s","insert","f"]": syntax error: Type mismatch: "insert" operator may not be applied to column s of type string.
+test-ovsdb: syntax "["s","delete","g"]": syntax error: Type mismatch: "delete" operator may not be applied to column s of type string.
+test-ovsdb: syntax "["u","+=",["uuid","9179ca6d-6d65-400a-b455-3ad92783a099"]]": syntax error: Type mismatch: "+=" operator may not be applied to column u of type uuid.
+test-ovsdb: syntax "["u","-=",["uuid","9179ca6d-6d65-400a-b455-3ad92783a099"]]": syntax error: Type mismatch: "-=" operator may not be applied to column u of type uuid.
+test-ovsdb: syntax "["u","*=",["uuid","9179ca6d-6d65-400a-b455-3ad92783a099"]]": syntax error: Type mismatch: "*=" operator may not be applied to column u of type uuid.
+test-ovsdb: syntax "["u","/=",["uuid","9179ca6d-6d65-400a-b455-3ad92783a099"]]": syntax error: Type mismatch: "/=" operator may not be applied to column u of type uuid.
+test-ovsdb: syntax "["u","insert",["uuid","9179ca6d-6d65-400a-b455-3ad92783a099"]]": syntax error: Type mismatch: "insert" operator may not be applied to column u of type uuid.
+test-ovsdb: syntax "["u","delete",["uuid","9179ca6d-6d65-400a-b455-3ad92783a099"]]": syntax error: Type mismatch: "delete" operator may not be applied to column u of type uuid.
+

@@ -1,0 +1,14 @@
+OVSDB JSON 803 3291cd79bc6b570dbfadbf930d1ea0bf943c50dc
+{"tables":{"link1":{"columns":{"l2":{"type":{"key":{"type":"uuid","refTable":"link2"},"min":0}},"k":{"type":{"key":{"type":"uuid","refTable":"link1"}}},"ka":{"type":{"key":{"type":"uuid","refTable":"link1"},"min":0,"max":"unlimited"}},"i":{"type":"integer"}}},"simple":{"columns":{"u":{"type":"uuid"},"ia":{"type":{"key":"integer","min":0,"max":"unlimited"}},"r":{"type":"real"},"s":{"type":"string"},"i":{"type":"integer"},"ua":{"type":{"key":"uuid","min":0,"max":"unlimited"}},"b":{"type":"boolean"},"ra":{"type":{"key":"real","min":0,"max":"unlimited"}},"ba":{"type":{"key":"boolean","min":0}},"sa":{"type":{"key":"string","min":0,"max":"unlimited"}}}},"link2":{"columns":{"l1":{"type":{"key":{"type":"uuid","refTable":"link1"},"min":0}},"i":{"type":"integer"}}}},"name":"idltest","version":"1.2.3"}
+OVSDB JSON 385 b99e28485fa3443512ad7df226edf94989efeff7
+{"_date":1386140283452,"simple":{"b13e3e31-53ce-40cf-91ad-0a24a459d013":{"u":["uuid","84f5c8f5-ac76-4dbc-a24f-8860eb407fc1"],"ia":["set",[1,2,3]],"r":2,"s":"mystring","b":true,"i":1,"ua":["set",[["uuid","69443985-7806-45e2-b35f-574a04e720f9"],["uuid","aad11ef0-816a-4b01-93e6-03b8b4256b98"]]],"ra":-0.5,"sa":["set",["abc","def"]],"ba":true},"c345ae7e-36bd-45df-b610-01e78e945057":{}}}
+OVSDB JSON 85 7b922820c8cf23e62f86cecb515630edee23239c
+{"_date":1386140283453,"simple":{"c345ae7e-36bd-45df-b610-01e78e945057":{"b":true}}}
+OVSDB JSON 137 68b760ba1a384cea1ba2f337bc8153fbaf0619f7
+{"_date":1386140283454,"simple":{"b13e3e31-53ce-40cf-91ad-0a24a459d013":{"r":123.5},"c345ae7e-36bd-45df-b610-01e78e945057":{"r":123.5}}}
+OVSDB JSON 118 3bb13ca0291f08df33d63fb22e8932a7bda12d0a
+{"_date":1386140283455,"simple":{"94002c20-e330-4aee-b76e-9595c2bea5aa":{"ra":1.5,"ia":1,"r":125,"ba":false,"i":-1}}}
+OVSDB JSON 149 8bed1ff6b8dc4097b3dbd1458e3522dd60ecc662
+{"_date":1386140283457,"simple":{"c345ae7e-36bd-45df-b610-01e78e945057":{"s":"newstring"},"94002c20-e330-4aee-b76e-9595c2bea5aa":{"s":"newstring"}}}
+OVSDB JSON 79 7258f7f0e738bf4cb985e29cd6d6b6ac8228c5fe
+{"_date":1386140283458,"simple":{"c345ae7e-36bd-45df-b610-01e78e945057":null}}

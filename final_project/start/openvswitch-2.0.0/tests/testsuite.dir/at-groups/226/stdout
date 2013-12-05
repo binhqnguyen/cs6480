@@ -1,0 +1,4 @@
+NXST_FLOW_MONITOR reply (xid=0x4):
+ event=DELETED reason=eviction table=1 idle_timeout=5 hard_timeout=16 cookie=0x123456789abcdef0 in_port=1
+ event=ABBREV xid=0x186a0
+

@@ -1,0 +1,30 @@
+OFPT_FEATURES_REPLY (xid=0x1): dpid:0000505400000001
+n_tables:2, n_buffers:256
+capabilities: FLOW_STATS TABLE_STATS PORT_STATS ARP_MATCH_IP
+actions: OUTPUT SET_VLAN_VID SET_VLAN_PCP STRIP_VLAN SET_DL_SRC SET_DL_DST SET_NW_SRC SET_NW_DST SET_NW_TOS SET_TP_SRC SET_TP_DST ENQUEUE
+ 1(eth1): addr:50:54:00:00:00:02
+     config:     0
+     state:      0
+     current:    100MB-FD AUTO_NEG
+     advertised: 10MB-HD 10MB-FD 100MB-HD 100MB-FD COPPER AUTO_NEG
+     supported:  10MB-HD 10MB-FD 100MB-HD 100MB-FD COPPER AUTO_NEG
+     speed: 100 Mbps now, 100 Mbps max
+ 2(eth2): addr:50:54:00:00:00:03
+     config:     0
+     state:      0
+     current:    100MB-FD AUTO_NEG
+     advertised: 10MB-HD 10MB-FD 100MB-HD 100MB-FD COPPER AUTO_NEG
+     supported:  10MB-HD 10MB-FD 100MB-HD 100MB-FD COPPER AUTO_NEG
+     speed: 100 Mbps now, 100 Mbps max
+ 3(eth0): addr:50:54:00:00:00:01
+     config:     0
+     state:      0
+     current:    100MB-FD AUTO_NEG
+     advertised: 10MB-HD 10MB-FD 100MB-HD 100MB-FD COPPER AUTO_NEG
+     supported:  10MB-HD 10MB-FD 100MB-HD 100MB-FD COPPER AUTO_NEG
+     speed: 100 Mbps now, 100 Mbps max
+ LOCAL(br0): addr:50:54:00:00:00:01
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     speed: 0 Mbps now, 0 Mbps max
+

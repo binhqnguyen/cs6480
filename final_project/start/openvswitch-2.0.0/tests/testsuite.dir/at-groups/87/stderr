@@ -1,0 +1,2 @@
+ofp_actions|WARN|duplicate write_metadata instruction not allowed, for OpenFlow 1.1+ compatibility
+ofp_actions|WARN|invalid instruction ordering: apply_actions must appear before write_metadata, for OpenFlow 1.1+ compatibility

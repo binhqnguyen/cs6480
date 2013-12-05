@@ -1,0 +1,14 @@
+insert 1 2 3:
+insert 2 2 3:
+print:
+1: i=2, j=3
+2: i=2, j=3
+commit:
+print:
+1: i=2, j=3
+2: i=2, j=3
+abort:
+print:
+1: i=2, j=3
+2: i=2, j=3
+

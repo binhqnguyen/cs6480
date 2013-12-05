@@ -1,0 +1,14 @@
+row,action,name,number,_version
+<0>,initial,"""ten""",10,"[""uuid"",""<1>""]"
+
+row,action,name,number,_version
+<2>,insert,"""five""",5,"[""uuid"",""<3>""]"
+
+row,action,name,number,_version
+<2>,old,"""five""",,"[""uuid"",""<3>""]"
+,new,"""FIVE""",5,"[""uuid"",""<4>""]"
+
+row,action,name,number,_version
+<2>,delete,"""FIVE""",5,"[""uuid"",""<4>""]"
+<0>,delete,"""ten""",10,"[""uuid"",""<1>""]"
+

@@ -1,0 +1,2 @@
+OFPT_FLOW_REMOVED (OF1.3) (xid=0x0): dl_vlan=9 reason=hard table_id=5 cookie:0xfedcba9876543210 duration1.01s idle60 hard120 pkts1234567 bytes1869134438
+

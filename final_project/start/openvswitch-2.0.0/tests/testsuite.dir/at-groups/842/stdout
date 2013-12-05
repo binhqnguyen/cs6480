@@ -1,0 +1,8 @@
+constraint violation: -2 is not one of the allowed values ([-1.5, 1.5])
+constraint violation: -1 is not one of the allowed values ([-1.5, 1.5])
+-1.5
+constraint violation: 0 is not one of the allowed values ([-1.5, 1.5])
+constraint violation: 1 is not one of the allowed values ([-1.5, 1.5])
+1.5
+constraint violation: 2 is not one of the allowed values ([-1.5, 1.5])
+

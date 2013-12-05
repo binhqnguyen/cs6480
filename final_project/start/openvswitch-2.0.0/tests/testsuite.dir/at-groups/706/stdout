@@ -1,0 +1,1 @@
+syntax "{"maxInteger":3,"minInteger":5,"type":"integer"}": syntax error: minInteger exceeds maxInteger

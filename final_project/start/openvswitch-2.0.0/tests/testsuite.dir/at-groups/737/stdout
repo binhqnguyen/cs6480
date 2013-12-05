@@ -1,0 +1,1 @@
+test-ovsdb: syntax "{"refTable":"a-b-c","type":"uuid"}": syntax error: Parsing ovsdb type failed: Type mismatch for member 'refTable'.

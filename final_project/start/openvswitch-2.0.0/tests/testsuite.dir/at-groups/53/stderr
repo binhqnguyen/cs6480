@@ -1,0 +1,2 @@
+ovs-ofctl: symmetric_l4,60,fubar,ofport,slaves:1,2: unknown algorithm `fubar'
+

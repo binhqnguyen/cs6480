@@ -1,0 +1,6 @@
+usable protocols: any
+chosen protocol: OpenFlow10-table_id
+OFPT_FLOW_MOD (xid=0x1): ADD actions=learn(table=1,eth_type=0x800,load:0x5->NXM_OF_IP_DST[])
+OFPT_FLOW_MOD (xid=0x2): ADD ip actions=learn(table=1,load:NXM_OF_IP_DST[]->NXM_NX_REG1[])
+OFPT_FLOW_MOD (xid=0x3): ADD ip actions=learn(table=1,eth_type=0x800,NXM_OF_IP_DST[])
+

@@ -1,0 +1,21 @@
+mutation  0:
+row 0: {"r":0.5}
+row 1: {"r":-2}
+row 2: {"r":1.75}
+
+mutation  1:
+row 0: {"r":-1.5}
+row 1: constraint violation: -4 is not in the valid range -2.5 to 1.75 (inclusive)
+row 2: {"r":-0.25}
+
+mutation  2:
+row 0: no change
+row 1: constraint violation: -6.25 is not in the valid range -2.5 to 1.75 (inclusive)
+row 2: constraint violation: 3.125 is not in the valid range -2.5 to 1.75 (inclusive)
+
+mutation  3:
+row 0: no change
+row 1: {"r":-0.625}
+row 2: {"r":0.3125}
+
+

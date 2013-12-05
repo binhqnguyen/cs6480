@@ -1,0 +1,2 @@
+test.h:3: warning: struct xyzzy member y is 2 bytes short of 4-byte alignment
+

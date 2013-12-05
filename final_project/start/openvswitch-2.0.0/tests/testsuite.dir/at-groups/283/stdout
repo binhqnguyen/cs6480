@@ -1,0 +1,3 @@
+source field ip_dst lacks correct prerequisites
+ovs-ofctl: actions are invalid with specified match (OFPBAC_MATCH_INCONSISTENT)
+

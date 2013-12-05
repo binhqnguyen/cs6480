@@ -1,0 +1,37 @@
+mutation  0:
+row 0: {"s":"a"}
+row 1: no change
+row 2: no change
+row 3: no change
+
+mutation  1:
+row 0: {"s":"b"}
+row 1: {"s":["set",["a","b"]]}
+row 2: no change
+row 3: no change
+
+mutation  2:
+row 0: {"s":["set",["c","d"]]}
+row 1: {"s":["set",["a","c","d"]]}
+row 2: {"s":["set",["a","b","c","d"]]}
+row 3: no change
+
+mutation  3:
+row 0: no change
+row 1: {"s":["set",[]]}
+row 2: {"s":"b"}
+row 3: {"s":["set",["b","c","d"]]}
+
+mutation  4:
+row 0: no change
+row 1: no change
+row 2: {"s":"a"}
+row 3: {"s":["set",["a","c","d"]]}
+
+mutation  5:
+row 0: no change
+row 1: no change
+row 2: no change
+row 3: {"s":["set",["a","b"]]}
+
+

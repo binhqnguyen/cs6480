@@ -1,0 +1,3 @@
+ofp_util|WARN|peer claims to support invalid OpenFlow version 0x00
+ofp_util|WARN|peer does not support any OpenFlow version (between 0x01 and 0x1f)
+

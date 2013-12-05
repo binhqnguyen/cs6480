@@ -1,0 +1,2 @@
+[{"details":"Parsing ovsdb operation 1 of 1 failed: Type mismatch for member 'uuid-name'.","error":"syntax error","syntax":"{\"op\":\"insert\",\"row\":{},\"table\":\"a\",\"uuid-name\":\"0\"}"}]
+

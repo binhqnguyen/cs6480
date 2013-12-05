@@ -1,0 +1,2 @@
+OFPT_FLOW_MOD (OF1.3) (xid=0x2): ADD table:255 priority=65535,arp,in_port=1,vlan_tci=0x0000/0x1fff,dl_src=50:54:00:00:00:06,dl_dst=50:54:00:00:00:05,arp_spa=192.168.0.2,arp_tpa=192.168.0.1,arp_op=2 send_flow_rem check_overlap reset_counts no_packet_counts no_byte_counts actions=output:3
+

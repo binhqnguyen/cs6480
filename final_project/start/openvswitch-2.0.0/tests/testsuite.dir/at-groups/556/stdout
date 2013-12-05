@@ -1,0 +1,77 @@
+### t=1000 ###
+passive
+enable
+  in BACKOFF for 0 ms (0 ms backoff)
+
+# Start listening.
+timeout
+  advance 0 ms
+run
+  should connect
+listening
+  in LISTENING for 0 ms (0 ms backoff)
+
+# Listening never times out.
+timeout
+  no timeout
+run
+
+# Listening failed (accept() returned funny error?).  Back off and try again.
+listen-error 0
+  in BACKOFF for 0 ms (1000 ms backoff)
+timeout
+  advance 1000 ms
+
+### t=2000 ###
+  in BACKOFF for 1000 ms (1000 ms backoff)
+run
+  should connect
+listening
+  in LISTENING for 0 ms (1000 ms backoff)
+
+# Connection accepted.
+connected
+  in ACTIVE for 0 ms (1000 ms backoff)
+  created 1000, last activity 1000, last connected 2000
+  1 successful connections out of 1 attempts, seqno 1
+  connected
+  last connected 0 ms ago, connected 0 ms total
+activity
+  created 1000, last activity 2000, last connected 2000
+advance 1000
+
+### t=3000 ###
+  in ACTIVE for 1000 ms (1000 ms backoff)
+activity
+  created 1000, last activity 3000, last connected 2000
+
+# Connection times out.
+timeout
+  advance 5000 ms
+
+### t=8000 ###
+  in ACTIVE for 6000 ms (1000 ms backoff)
+run
+  should send probe
+  in IDLE for 0 ms (1000 ms backoff)
+timeout
+  advance 5000 ms
+
+### t=13000 ###
+  in IDLE for 5000 ms (1000 ms backoff)
+run
+  should disconnect
+disconnected
+  in BACKOFF for 0 ms (0 ms backoff)
+  1 successful connections out of 1 attempts, seqno 2
+  disconnected
+  disconnected at 13000 ms (0 ms ago)
+
+# Start listening again.
+timeout
+  advance 0 ms
+run
+  should connect
+listening
+  in LISTENING for 0 ms (0 ms backoff)
+

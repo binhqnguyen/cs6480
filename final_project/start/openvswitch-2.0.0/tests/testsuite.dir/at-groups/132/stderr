@@ -1,0 +1,4 @@
+ofp_util|INFO|normalization changed ofp_match, details:
+ofp_util|INFO| pre: arp,in_port=1,vlan_tci=0x0000,dl_src=50:54:00:00:00:06,dl_dst=50:54:00:00:00:05,arp_spa=192.168.0.2,arp_tpa=192.168.0.1,arp_op=2,nw_tos=0,tp_src=0,tp_dst=0
+ofp_util|INFO|post: arp,in_port=1,vlan_tci=0x0000,dl_src=50:54:00:00:00:06,dl_dst=50:54:00:00:00:05,arp_spa=192.168.0.2,arp_tpa=192.168.0.1,arp_op=2
+

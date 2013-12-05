@@ -1,0 +1,3 @@
+2013-12-04T06:56:25Z|00001|vlog|INFO|opened log file /home/ovs/cs6480/final_project/start/openvswitch-2.0.0/tests/testsuite.dir/0557/ovs-vswitchd.log
+2013-12-04T06:56:25Z|00002|reconnect|INFO|unix:/home/ovs/cs6480/final_project/start/openvswitch-2.0.0/tests/testsuite.dir/0557/db.sock: connecting...
+2013-12-04T06:56:25Z|00003|reconnect|INFO|unix:/home/ovs/cs6480/final_project/start/openvswitch-2.0.0/tests/testsuite.dir/0557/db.sock: connected

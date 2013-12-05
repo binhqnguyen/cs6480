@@ -1,0 +1,1 @@
+syntax "{"columns":{"name":{"type":"string"}},"maxRows":0}": syntax error: maxRows must be at least 1

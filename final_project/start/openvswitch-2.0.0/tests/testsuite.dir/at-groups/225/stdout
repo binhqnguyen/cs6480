@@ -1,0 +1,4 @@
+NXST_FLOW_MONITOR request (xid=0x4):
+ id=16384 flags=initial,add,delete,modify,actions,own out_port=LOCAL table=1
+ id=8192 flags=delete table=2 in_port=1
+

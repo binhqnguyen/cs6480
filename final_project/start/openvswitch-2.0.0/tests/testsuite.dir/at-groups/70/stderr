@@ -1,0 +1,2 @@
+test.h:8: warning: checking size of struct moo but struct wibble was most recently defined
+

@@ -1,0 +1,6 @@
+[{"details":"0 is less than minimum allowed value 1","error":"constraint violation"}]
+[{"details":"-1 is less than minimum allowed value 1","error":"constraint violation"}]
+[{"details":"-2 is less than minimum allowed value 1","error":"constraint violation"}]
+[{"uuid":["uuid","<0>"]}]
+[{"uuid":["uuid","<1>"]},{"details":"transaction causes \"constrained\" table to contain 2 rows, greater than the schema-defined limit of 1 row(s)","error":"constraint violation"}]
+

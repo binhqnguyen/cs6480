@@ -1,0 +1,6 @@
+constraint violation: "" length 0 is less than minimum allowed length 2
+constraint violation: "a" length 1 is less than minimum allowed length 2
+"ab"
+"abc"
+constraint violation: "𝄞" length 1 is less than minimum allowed length 2
+

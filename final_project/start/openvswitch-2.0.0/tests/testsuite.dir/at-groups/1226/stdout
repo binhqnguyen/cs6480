@@ -1,0 +1,4 @@
+row,action,name,number,_version
+<0>,delete,"""FIVE""",5,"[""uuid"",""<1>""]"
+<2>,delete,"""ten""",10,"[""uuid"",""<3>""]"
+

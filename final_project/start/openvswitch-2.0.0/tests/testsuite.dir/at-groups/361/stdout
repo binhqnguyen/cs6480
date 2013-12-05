@@ -1,0 +1,2 @@
+appctl.py: cannot connect to "/bogus/path.pid" (No such file or directory)
+

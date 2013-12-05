@@ -1,0 +1,26 @@
+mutation  0:
+row 0: {"i":1}
+row 1: {"i":2}
+row 2: {"i":3}
+
+mutation  1:
+row 0: {"i":-2}
+row 1: {"i":-1}
+row 2: {"i":0}
+
+mutation  2:
+row 0: no change
+row 1: {"i":3}
+row 2: {"i":6}
+
+mutation  3:
+row 0: no change
+row 1: {"i":0}
+row 2: {"i":0}
+
+mutation  4:
+row 0: no change
+row 1: no change
+row 2: {"i":0}
+
+

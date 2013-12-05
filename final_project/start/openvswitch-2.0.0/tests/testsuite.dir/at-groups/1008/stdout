@@ -1,0 +1,37 @@
+mutation  0:
+row 0: {"u":["uuid","ddd9e79d-7782-414c-8b22-1046c60b6ec2"]}
+row 1: no change
+row 2: {"u":["set",[["uuid","a60fe7ff-317b-4568-9106-892b37445313"],["uuid","ddd9e79d-7782-414c-8b22-1046c60b6ec2"]]]}
+row 3: {"u":["set",[["uuid","2607d30e-e652-4927-9fec-8bbf1b60c7e9"],["uuid","ddd9e79d-7782-414c-8b22-1046c60b6ec2"]]]}
+
+mutation  1:
+row 0: {"u":["uuid","a60fe7ff-317b-4568-9106-892b37445313"]}
+row 1: {"u":["set",[["uuid","a60fe7ff-317b-4568-9106-892b37445313"],["uuid","ddd9e79d-7782-414c-8b22-1046c60b6ec2"]]]}
+row 2: no change
+row 3: {"u":["set",[["uuid","2607d30e-e652-4927-9fec-8bbf1b60c7e9"],["uuid","a60fe7ff-317b-4568-9106-892b37445313"]]]}
+
+mutation  2:
+row 0: {"u":["uuid","2607d30e-e652-4927-9fec-8bbf1b60c7e9"]}
+row 1: {"u":["set",[["uuid","2607d30e-e652-4927-9fec-8bbf1b60c7e9"],["uuid","ddd9e79d-7782-414c-8b22-1046c60b6ec2"]]]}
+row 2: {"u":["set",[["uuid","2607d30e-e652-4927-9fec-8bbf1b60c7e9"],["uuid","a60fe7ff-317b-4568-9106-892b37445313"]]]}
+row 3: no change
+
+mutation  3:
+row 0: no change
+row 1: {"u":["set",[]]}
+row 2: no change
+row 3: no change
+
+mutation  4:
+row 0: no change
+row 1: no change
+row 2: {"u":["set",[]]}
+row 3: no change
+
+mutation  5:
+row 0: no change
+row 1: no change
+row 2: no change
+row 3: {"u":["set",[]]}
+
+

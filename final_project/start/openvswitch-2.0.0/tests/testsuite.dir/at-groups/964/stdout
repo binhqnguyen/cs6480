@@ -1,0 +1,16 @@
+null == null2
+null == null3
+null == null4
+null == null5
+hash(null) == hash(null6)
+null2 == null3
+null2 == null4
+null2 == null5
+hash(null2) == hash(null6)
+null3 == null4
+null3 == null5
+hash(null3) == hash(null6)
+null4 == null5
+hash(null4) == hash(null6)
+hash(null5) == hash(null6)
+

@@ -1,0 +1,122 @@
+### t=1000 ###
+enable
+  in BACKOFF for 0 ms (0 ms backoff)
+
+# First connect, then idle timeout kills connection.
+run
+  should connect
+connected
+  in ACTIVE for 0 ms (0 ms backoff)
+  created 1000, last activity 1000, last connected 1000
+  1 successful connections out of 1 attempts, seqno 1
+  connected
+  last connected 0 ms ago, connected 0 ms total
+timeout
+  advance 5000 ms
+
+### t=6000 ###
+  in ACTIVE for 5000 ms (0 ms backoff)
+run
+  should send probe
+  in IDLE for 0 ms (0 ms backoff)
+timeout
+  advance 5000 ms
+
+### t=11000 ###
+  in IDLE for 5000 ms (0 ms backoff)
+run
+  should disconnect
+disconnected
+  in BACKOFF for 0 ms (1000 ms backoff)
+  1 successful connections out of 1 attempts, seqno 2
+  disconnected
+  disconnected at 11000 ms (0 ms ago)
+
+# Back off for 1000 ms.
+timeout
+  advance 1000 ms
+
+### t=12000 ###
+  in BACKOFF for 1000 ms (1000 ms backoff)
+  last connected 11000 ms ago, connected 10000 ms total
+run
+  should connect
+
+# Second connect, then idle timeout kills connection.
+run
+  should connect
+connected
+  in ACTIVE for 0 ms (1000 ms backoff)
+  created 1000, last activity 1000, last connected 12000
+  2 successful connections out of 2 attempts, seqno 3
+  connected
+  last connected 0 ms ago, connected 10000 ms total
+timeout
+  advance 5000 ms
+
+### t=17000 ###
+  in ACTIVE for 5000 ms (1000 ms backoff)
+run
+  should send probe
+  in IDLE for 0 ms (1000 ms backoff)
+timeout
+  advance 5000 ms
+
+### t=22000 ###
+  in IDLE for 5000 ms (1000 ms backoff)
+run
+  should disconnect
+disconnected
+  in BACKOFF for 0 ms (2000 ms backoff)
+  2 successful connections out of 2 attempts, seqno 4
+  disconnected
+  disconnected at 22000 ms (0 ms ago)
+
+# Back off for 2000 ms.
+timeout
+  advance 2000 ms
+
+### t=24000 ###
+  in BACKOFF for 2000 ms (2000 ms backoff)
+  last connected 12000 ms ago, connected 20000 ms total
+run
+  should connect
+
+# Third connect, then idle timeout kills connection.
+run
+  should connect
+connected
+  in ACTIVE for 0 ms (2000 ms backoff)
+  created 1000, last activity 1000, last connected 24000
+  3 successful connections out of 3 attempts, seqno 5
+  connected
+  last connected 0 ms ago, connected 20000 ms total
+timeout
+  advance 5000 ms
+
+### t=29000 ###
+  in ACTIVE for 5000 ms (2000 ms backoff)
+run
+  should send probe
+  in IDLE for 0 ms (2000 ms backoff)
+timeout
+  advance 5000 ms
+
+### t=34000 ###
+  in IDLE for 5000 ms (2000 ms backoff)
+run
+  should disconnect
+disconnected
+  in BACKOFF for 0 ms (4000 ms backoff)
+  3 successful connections out of 3 attempts, seqno 6
+  disconnected
+  disconnected at 34000 ms (0 ms ago)
+
+# Back off for 4000 ms.
+timeout
+  advance 4000 ms
+
+### t=38000 ###
+  in BACKOFF for 4000 ms (4000 ms backoff)
+  last connected 14000 ms ago, connected 30000 ms total
+

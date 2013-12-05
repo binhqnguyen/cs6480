@@ -1,0 +1,16 @@
+insert 1 2 3:
+insert 2 2 3:
+commit:
+print:
+1: i=2, j=3
+2: i=2, j=3
+modify 2 5 -1:
+modify 1 -1 4:
+print:
+1: i=2, j=4
+2: i=5, j=3
+commit:
+print:
+1: i=2, j=4
+2: i=5, j=3
+

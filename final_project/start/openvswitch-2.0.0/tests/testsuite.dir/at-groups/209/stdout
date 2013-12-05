@@ -1,0 +1,3 @@
+NXT_PACKET_IN (xid=0x0): table_id=7 cookie=0x9 total_len=64 in_port=1 tun_id=0x6 metadata=0x5a5a5a5a5a5a5a5a reg0=0x1 reg1=0x2 reg2=0x3 reg3=0x4 reg4=0x5 (via action) data_len=64 (unbuffered)
+tcp,metadata=0,in_port=0,dl_vlan=80,dl_vlan_pcp=0,dl_src=80:81:81:81:81:81,dl_dst=82:82:82:82:82:82,nw_src=83.83.83.83,nw_dst=84.84.84.84,nw_tos=0,nw_ecn=0,nw_ttl=0,tp_src=85,tp_dst=86 tcp_csum:316d
+

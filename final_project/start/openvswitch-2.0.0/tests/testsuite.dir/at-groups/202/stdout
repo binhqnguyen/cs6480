@@ -1,0 +1,11 @@
+OFPT_SET_ASYNC (OF1.3) (xid=0x0):
+ master:
+       PACKET_IN: no_match invalid_ttl 12
+     PORT_STATUS: add delete
+    FLOW_REMOVED: (off)
+
+ slave:
+       PACKET_IN: no_match action invalid_ttl 12
+     PORT_STATUS: add delete modify
+    FLOW_REMOVED: idle hard
+

@@ -1,0 +1,2 @@
+NXT_FLOW_REMOVED (xid=0x0): priority=65535,arp,in_port=3,vlan_tci=0x0000,dl_src=50:54:00:00:00:05,dl_dst=50:54:00:00:00:06,arp_spa=192.168.0.1,arp_tpa=192.168.0.2,arp_op=2 reason=idle table_id=1 duration6.024s idle5 pkts1 bytes60
+

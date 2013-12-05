@@ -1,0 +1,55 @@
+mutation  0:
+row 0: no change
+row 1: {"r":1}
+row 2: {"r":["set",[1,2]]}
+row 3: {"r":["set",[1,2,3]]}
+
+mutation  1:
+row 0: no change
+row 1: {"r":-1}
+row 2: {"r":["set",[-1,0]]}
+row 3: {"r":["set",[-1,0,1]]}
+
+mutation  2:
+row 0: no change
+row 1: {"r":1.25}
+row 2: {"r":["set",[1.25,3.75]]}
+row 3: constraint violation: 6.25 is greater than maximum allowed value 6
+
+mutation  3:
+row 0: no change
+row 1: {"r":0.125}
+row 2: {"r":["set",[0.125,0.375]]}
+row 3: {"r":["set",[0.125,0.375,0.625]]}
+
+mutation  4:
+row 0: no change
+row 1: {"r":0}
+row 2: constraint violation: Result of "*=" operation contains duplicates.
+row 3: constraint violation: Result of "*=" operation contains duplicates.
+
+mutation  5:
+row 0: {"r":1.5}
+row 1: {"r":["set",[0.5,1.5]]}
+row 2: no change
+row 3: no change
+
+mutation  6:
+row 0: {"r":3}
+row 1: {"r":["set",[0.5,3]]}
+row 2: {"r":["set",[0.5,1.5,3]]}
+row 3: {"r":["set",[0.5,1.5,2.5,3]]}
+
+mutation  7:
+row 0: no change
+row 1: no change
+row 2: {"r":0.5}
+row 3: {"r":["set",[0.5,2.5]]}
+
+mutation  8:
+row 0: no change
+row 1: {"r":["set",[]]}
+row 2: {"r":["set",[]]}
+row 3: {"r":["set",[]]}
+
+

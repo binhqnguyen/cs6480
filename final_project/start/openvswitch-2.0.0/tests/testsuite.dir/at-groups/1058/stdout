@@ -1,0 +1,6 @@
+[{"uuid":["uuid","<0>"]}]
+[{"details":"Cannot update immutable column i in table a.","error":"constraint violation","syntax":"{\"op\":\"update\",\"row\":{\"i\":10},\"table\":\"a\",\"where\":[]}"}]
+[{"details":"Cannot update immutable column i in table a.","error":"constraint violation","syntax":"{\"op\":\"update\",\"row\":{\"i\":5},\"table\":\"a\",\"where\":[]}"}]
+[{"details":"Cannot mutate immutable column i in table a.","error":"constraint violation","syntax":"[\"i\",\"-=\",5]"}]
+[{"details":"Cannot mutate immutable column i in table a.","error":"constraint violation","syntax":"[\"i\",\"*=\",1]"}]
+

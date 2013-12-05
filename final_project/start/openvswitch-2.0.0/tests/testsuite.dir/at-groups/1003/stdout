@@ -1,0 +1,55 @@
+mutation  0:
+row 0: no change
+row 1: {"i":1}
+row 2: {"i":["set",[1,2]]}
+row 3: {"i":["set",[1,2,3]]}
+
+mutation  1:
+row 0: no change
+row 1: {"i":-2}
+row 2: {"i":["set",[-2,-1]]}
+row 3: {"i":["set",[-2,-1,0]]}
+
+mutation  2:
+row 0: no change
+row 1: no change
+row 2: {"i":["set",[0,3]]}
+row 3: constraint violation: 6 is greater than maximum allowed value 5
+
+mutation  3:
+row 0: no change
+row 1: no change
+row 2: constraint violation: Result of "/=" operation contains duplicates.
+row 3: constraint violation: Result of "/=" operation contains duplicates.
+
+mutation  4:
+row 0: no change
+row 1: no change
+row 2: no change
+row 3: constraint violation: Result of "%=" operation contains duplicates.
+
+mutation  5:
+row 0: {"i":1}
+row 1: {"i":["set",[0,1]]}
+row 2: no change
+row 3: no change
+
+mutation  6:
+row 0: {"i":["set",[2,3]]}
+row 1: {"i":["set",[0,2,3]]}
+row 2: {"i":["set",[0,1,2,3]]}
+row 3: {"i":["set",[0,1,2,3]]}
+
+mutation  7:
+row 0: no change
+row 1: no change
+row 2: {"i":0}
+row 3: {"i":["set",[0,2]]}
+
+mutation  8:
+row 0: no change
+row 1: no change
+row 2: no change
+row 3: {"i":["set",[0,1]]}
+
+

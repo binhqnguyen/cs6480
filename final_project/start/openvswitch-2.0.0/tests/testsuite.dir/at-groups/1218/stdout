@@ -1,0 +1,6 @@
+row,action,name,number,_version
+<0>,initial,"""ten""",10,"[""uuid"",""<1>""]"
+
+row,action,name,number,_version
+<2>,insert,"""nine""",9,"[""uuid"",""<3>""]"
+

@@ -1,0 +1,8 @@
+OFPST_METER_CONFIG reply (OF1.3) (xid=0x2):
+meter=1 kbps burst bands=
+type=drop rate=65536 burst_size=1280
+type=dscp_remark rate=1048576 burst_size=61440 prec_level=0
+
+meter=2 kbps stats bands=
+type=drop rate=131072
+

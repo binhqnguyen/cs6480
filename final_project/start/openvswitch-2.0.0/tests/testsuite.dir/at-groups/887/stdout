@@ -1,0 +1,6 @@
+["set",[]]
+"a longer string"
+"a relatively long string"
+["set",["a relatively long string","short string"]]
+["set",["a relatively long string","short string","zzz"]]
+

@@ -1,0 +1,102 @@
+in_port=LOCAL
+
+dl_src=00:01:02:03:04:05
+
+dl_dst=10:20:30:40:50:60
+
+dl_vlan=291
+
+dl_vlan_pcp=5
+
+dl_vlan=291,dl_vlan_pcp=4
+
+vlan_tci=0x0000
+
+vlan_tci=0x0000
+ 1: 28 -> 38
+20: 05 -> 00
+
+dl_vlan=256,dl_vlan_pcp=7
+18: f1 -> 01
+20: ff -> 07
+
+dl_type=0x1234
+
+ip,nw_proto=5
+
+dl_type=0x1234,nw_proto=5
+normal:  3: cf -> ef
+normal: 25: 05 -> 00
+
+ip,nw_tos=252
+
+arp,nw_tos=4
+24: 05 -> 04
+normal:  1: 18 -> 38
+normal: 24: 04 -> 00
+
+ip,nw_tos=48
+24: 31 -> 30
+
+arp,arp_op=2
+
+ip,nw_src=192.168.128.85
+
+ip,nw_src=192.168.128.0/24
+31: 55 -> 00
+
+ip,nw_dst=192.168.128.85
+
+ip,nw_dst=192.168.128.0/24
+35: 55 -> 00
+
+arp,arp_spa=192.168.128.85
+
+arp,arp_spa=192.168.128.0/24
+31: 55 -> 00
+
+arp,arp_tpa=192.168.128.85
+
+arp,arp_tpa=192.168.128.0/24
+35: 55 -> 00
+
+dl_type=0x1234,nw_src=192.168.128.0/24
+31: 55 -> 00
+normal:  2: 08 -> 20
+normal: 28: c0 -> 00
+normal: 29: a8 -> 00
+normal: 30: 80 -> 00
+
+dl_type=0x1234,nw_dst=192.168.128.0/24
+35: 55 -> 00
+normal:  1: 32 -> 38
+normal: 32: c0 -> 00
+normal: 33: a8 -> 00
+normal: 34: 80 -> 00
+
+tcp,tp_src=443
+
+tcp,tp_dst=443
+
+udp,tp_src=443
+
+udp,tp_dst=443
+
+sctp,tp_src=443
+
+sctp,tp_dst=443
+
+icmp,icmp_type=5
+
+icmp,icmp_code=8
+
+ip,nw_proto=21,tp_src=443
+normal:  3: 8f -> cf
+normal: 36: 01 -> 00
+normal: 37: bb -> 00
+
+ip,nw_proto=21,tp_dst=443
+normal:  3: 4f -> cf
+normal: 38: 01 -> 00
+normal: 39: bb -> 00
+
