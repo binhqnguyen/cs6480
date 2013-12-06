@@ -1,0 +1,33 @@
+#!/bin/bash 
+#Video streaming as in http://www.techsupportalert.com/5-Best-Free-Video-Streaming-Sites.htm
+site1="youtube.com"
+site2="vimeo.com"
+site3="metacafe.com"
+site4="hulu.com"
+site5="veoh.com"
+
+#http://www.serverpact.com: top 10 gaming servers (minecraft)
+game1="play.climaxcraft.com"
+game2="play.guildcraft.nl"
+game3="play.mc-haze.com"
+game4="play.pika-network.net"
+game5="mc-planetservers.com"
+game6="play.mcspacecraft.nl"
+game7="37.59.15.23"
+game8="server.hollandcraft.nl"
+game9="play.dutchrastacraft.nl"
+game10="37.187.88.146"
+
+for i in `seq 1 5`;
+do
+	site="site$i"
+	echo "pinging ${!site} ..."
+	ping -c 50 ${!site} >> site$i.ping.pgw
+done
+
+for i in `seq 1 10`;
+do
+	game="game$i"
+	echo "pinging ${!game} ..."
+	ping -c 50 ${!game} >> game$i.ping.pgw
+done
