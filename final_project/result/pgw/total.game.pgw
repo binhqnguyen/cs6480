@@ -7,6 +7,21 @@ rtt min/avg/max/mdev = 147.153/148.449/153.307/1.390 ms
 --- play.mc-haze.com ping statistics ---
 50 packets transmitted, 0 received, 100% packet loss, time 49096ms
 
+--- mc-planetservers.com ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 49073ms
+rtt min/avg/max/mdev = 152.324/157.633/198.699/7.626 ms
+--- play.mcspacecraft.nl ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 252602ms
+rtt min/avg/max/mdev = 145.471/146.041/148.461/0.738 ms
+--- 37.59.15.23 ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 49085ms
+rtt min/avg/max/mdev = 156.477/157.058/159.166/0.837 ms
+--- server.hollandcraft.nl ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 49069ms
+rtt min/avg/max/mdev = 142.320/156.388/619.234/69.573 ms
+--- play.dutchrastacraft.nl ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 49075ms
+rtt min/avg/max/mdev = 143.529/149.142/393.723/34.954 ms
 --- 37.187.88.146 ping statistics ---
 50 packets transmitted, 50 received, 0% packet loss, time 49048ms
 rtt min/avg/max/mdev = 142.534/143.162/153.567/1.690 ms
