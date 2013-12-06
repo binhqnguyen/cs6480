@@ -1,0 +1,27 @@
+\begin{thebibliography}{1}
+
+\bibitem{banerjee2013moca}
+{\sc Banerjee, A., Chen, X., Erman, J., Gopalakrishnan, V., Lee, S., and Van
+  Der~Merwe, J.}
+\newblock Moca: a lightweight mobile cloud offloading architecture.
+\newblock In {\em Proceedings of the eighth ACM international workshop on
+  Mobility in the evolving internet architecture\/} (2013), ACM, pp.~11--16.
+
+\bibitem{dong20113g}
+{\sc Dong, W., Ge, Z., and Lee, S.}
+\newblock 3g meets the internet: understanding the performance of hierarchical
+  routing in 3g networks.
+\newblock In {\em Proceedings of the 23rd International Teletraffic Congress\/}
+  (2011), ITCP, pp.~15--22.
+
+\bibitem{jin2013softcell}
+{\sc Jin, X., Li, L.~E., Vanbever, L., and Rexford, J.}
+\newblock Softcell: Scalable and flexible cellular core network architecture.
+
+\bibitem{li2012toward}
+{\sc Li, L.~E., Mao, Z.~M., and Rexford, J.}
+\newblock Toward software-defined cellular networks.
+\newblock In {\em Software Defined Networking (EWSDN), 2012 European Workshop
+  on\/} (2012), IEEE, pp.~7--12.
+
+\end{thebibliography}
