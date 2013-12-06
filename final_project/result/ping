@@ -22,12 +22,12 @@ for i in `seq 1 5`;
 do
 	site="site$i"
 	echo "pinging ${!site} ..."
-	ping -c 50 ${!site} >> site$i.ping.origin
+	ping -c 50 ${!site} >> site$i.ping.pgw
 done
 
 for i in `seq 1 10`;
 do
 	game="game$i"
 	echo "pinging ${!game} ..."
-	ping -c 50 ${!game} >> game$i.ping.origin
+	ping -c 50 ${!game} >> game$i.ping.pgw
 done
