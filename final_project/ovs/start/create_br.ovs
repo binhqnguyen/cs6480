@@ -1,0 +1,29 @@
+#!/bin/bash
+
+net_d="net_d"
+net_cloud="eth1"
+net_server="eth2"
+ovs_ip="192.168.10.128"
+net_d_ip="192.168.4.100"
+
+#./net/net_d.sh
+ifconfig $net_d $net_d_ip 
+
+ovs-vsctl add-br br0 
+ovs-vsctl add-port br0 $net_d
+ovs-vsctl add-port br0 $net_cloud
+ovs-vsctl add-port br0 $net_server
+ovs-vsctl set-controller br0 tcp:$ovs_ip:6633
+ovs-vsctl set bridge br0 protocols=OpenFlow10,OpenFlow12,OpenFlow13
+
+
+#for i in 1 2 3 4; do
+#ovs-vsctl add-port br0 p$i -- set Interface p$i ofport_request=$i
+#ovs-ofctl mod-port br0 p$i up
+#done
+
+ovs-vsctl show
+ovs-ofctl show br0
+
+
+

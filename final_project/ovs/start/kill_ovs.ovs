@@ -1,0 +1,3 @@
+#!/bin/bash
+./delete_br.ovs
+./kill_ovs.ovs
