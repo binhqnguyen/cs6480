@@ -1,0 +1,55 @@
+PING hulu.com (72.247.8.235) 56(84) bytes of data.
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=1 ttl=127 time=65.9 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=2 ttl=127 time=65.4 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=3 ttl=127 time=67.1 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=4 ttl=127 time=65.0 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=5 ttl=127 time=65.0 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=6 ttl=127 time=65.6 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=7 ttl=127 time=65.8 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=8 ttl=127 time=65.9 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=9 ttl=127 time=66.1 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=10 ttl=127 time=66.3 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=11 ttl=127 time=65.7 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=12 ttl=127 time=69.2 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=13 ttl=127 time=65.0 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=14 ttl=127 time=67.6 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=15 ttl=127 time=65.0 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=16 ttl=127 time=65.1 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=17 ttl=127 time=65.2 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=18 ttl=127 time=65.1 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=19 ttl=127 time=68.8 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=20 ttl=127 time=68.1 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=21 ttl=127 time=66.3 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=22 ttl=127 time=66.3 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=23 ttl=127 time=64.9 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=24 ttl=127 time=64.8 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=25 ttl=127 time=68.4 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=26 ttl=127 time=65.1 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=27 ttl=127 time=66.4 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=28 ttl=127 time=65.6 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=29 ttl=127 time=64.9 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=30 ttl=127 time=64.9 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=31 ttl=127 time=64.8 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=32 ttl=127 time=65.1 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=33 ttl=127 time=65.1 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=34 ttl=127 time=64.9 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=35 ttl=127 time=64.8 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=36 ttl=127 time=65.1 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=37 ttl=127 time=65.0 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=38 ttl=127 time=66.1 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=39 ttl=127 time=65.1 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=40 ttl=127 time=64.9 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=41 ttl=127 time=65.5 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=42 ttl=127 time=65.1 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=43 ttl=127 time=64.9 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=44 ttl=127 time=64.8 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=45 ttl=127 time=64.9 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=46 ttl=127 time=65.0 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=47 ttl=127 time=65.9 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=48 ttl=127 time=65.1 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=49 ttl=127 time=64.9 ms
+64 bytes from a72-247-8-235.deploy.akamaitechnologies.com (72.247.8.235): icmp_req=50 ttl=127 time=65.0 ms
+
+--- hulu.com ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 49078ms
+rtt min/avg/max/mdev = 64.803/65.700/69.273/1.129 ms

@@ -1,0 +1,53 @@
+PING play.dutchrastacraft.nl (176.31.225.131) 56(84) bytes of data.
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=1 ttl=127 time=151 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=2 ttl=127 time=146 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=3 ttl=127 time=159 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=4 ttl=127 time=146 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=5 ttl=127 time=150 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=7 ttl=127 time=147 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=8 ttl=127 time=160 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=9 ttl=127 time=153 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=10 ttl=127 time=159 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=11 ttl=127 time=157 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=12 ttl=127 time=166 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=13 ttl=127 time=146 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=14 ttl=127 time=157 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=15 ttl=127 time=146 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=16 ttl=127 time=152 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=17 ttl=127 time=158 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=18 ttl=127 time=147 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=19 ttl=127 time=166 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=20 ttl=127 time=149 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=21 ttl=127 time=152 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=22 ttl=127 time=160 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=23 ttl=127 time=147 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=24 ttl=127 time=158 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=25 ttl=127 time=148 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=26 ttl=127 time=147 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=28 ttl=127 time=146 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=29 ttl=127 time=147 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=30 ttl=127 time=160 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=31 ttl=127 time=155 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=32 ttl=127 time=166 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=33 ttl=127 time=151 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=34 ttl=127 time=163 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=35 ttl=127 time=154 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=36 ttl=127 time=151 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=37 ttl=127 time=158 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=38 ttl=127 time=155 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=39 ttl=127 time=149 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=40 ttl=127 time=152 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=41 ttl=127 time=149 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=42 ttl=127 time=148 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=43 ttl=127 time=148 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=44 ttl=127 time=146 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=45 ttl=127 time=164 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=46 ttl=127 time=149 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=47 ttl=127 time=158 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=48 ttl=127 time=152 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=49 ttl=127 time=153 ms
+64 bytes from ns225417.ovh.net (176.31.225.131): icmp_req=50 ttl=127 time=149 ms
+
+--- play.dutchrastacraft.nl ping statistics ---
+50 packets transmitted, 48 received, 4% packet loss, time 49071ms
+rtt min/avg/max/mdev = 146.481/153.553/166.751/6.060 ms

@@ -1,0 +1,27 @@
+--- play.climaxcraft.com ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 49045ms
+rtt min/avg/max/mdev = 20.417/22.211/25.878/1.219 ms
+--- play.guildcraft.nl ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 49078ms
+rtt min/avg/max/mdev = 150.183/151.662/155.997/1.472 ms
+--- play.mc-haze.com ping statistics ---
+50 packets transmitted, 49 received, 2% packet loss, time 49055ms
+rtt min/avg/max/mdev = 154.581/155.898/159.177/1.093 ms
+--- mc-planetservers.com ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 49068ms
+rtt min/avg/max/mdev = 154.659/158.536/171.248/3.952 ms
+--- play.mcspacecraft.nl ping statistics ---
+50 packets transmitted, 49 received, 2% packet loss, time 249284ms
+rtt min/avg/max/mdev = 148.275/162.116/341.793/31.613 ms
+--- 37.59.15.23 ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 49066ms
+rtt min/avg/max/mdev = 159.225/160.793/170.441/2.055 ms
+--- server.hollandcraft.nl ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 49002ms
+rtt min/avg/max/mdev = 144.790/163.520/339.839/46.251 ms
+--- play.dutchrastacraft.nl ping statistics ---
+50 packets transmitted, 48 received, 4% packet loss, time 49071ms
+rtt min/avg/max/mdev = 146.481/153.553/166.751/6.060 ms
+--- 37.187.88.146 ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 49068ms
+rtt min/avg/max/mdev = 145.178/146.251/154.436/1.628 ms

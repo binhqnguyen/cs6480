@@ -1,0 +1,15 @@
+--- youtube.com ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 245628ms
+rtt min/avg/max/mdev = 5.362/7.226/22.713/3.139 ms
+--- vimeo.com ping statistics ---
+50 packets transmitted, 0 received, 100% packet loss, time 49136ms
+
+--- metacafe.com ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 248219ms
+rtt min/avg/max/mdev = 48.106/56.949/70.286/7.375 ms
+--- hulu.com ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 49078ms
+rtt min/avg/max/mdev = 64.803/65.700/69.273/1.129 ms
+--- veoh.com ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 49038ms
+rtt min/avg/max/mdev = 71.280/71.709/73.341/0.411 ms
