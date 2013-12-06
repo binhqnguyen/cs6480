@@ -102,7 +102,25 @@ class SimpleSwitch13(app_manager.RyuApp):
 	p.add_protocol(icmp_packet)
 	p.serialize()
 	return p.data
-
+    
+	
+    def gtp_encap(self,eth, ip_packet, upd_packet, gtp_packet):
+	p = packet.Packet()
+	p.add_protocol(eth)
+	p.add_protocol(ip_packet)
+	p.add_protocol(udp_packet)
+	p.add_protocol(gtp_packet)
+	p.serialize()
+	return p.data
+    
+    def create_arp(self, arp_packet, eth):
+	p = packet.Packet()
+	p.add_protocol(eth)
+	p.add_protocol(arp_packet)
+	print p
+	p.serialize()
+	return p.data
+		
 
     @set_ev_cls(ofp_event.EventOFPPacketIn, MAIN_DISPATCHER)
     def _packet_in_handler(self, ev):
@@ -132,12 +150,38 @@ class SimpleSwitch13(app_manager.RyuApp):
             out_port = ofproto.OFPP_FLOOD
 
 	
+	ip_packet = packet.Packet(msg.data).get_protocols(ipv4.ipv4)
+	if ip_packet:
+		print "ip_packet[0].src=%s, ip_packet[0].dst=%s"%(ip_packet[0].src,ip_packet[0].dst)
+		if ip_packet[0].src == ol_net_server_ip: ##packets from offloading server.
+			print "***********To ovs..."
+			if up_ip_packet:
+				eth_packet = ether.ethernet (enodeb_net_d_mac, sgw_net_d_mac, 0x0800)
+				icmp_packet = packet.Packet(msg.data).get_protocols(icmp.icmp)
+				inner_ip_packet = 
+				udp_packet 
+				gtp_u
+				gtp ...
+				###gtp = [eth, outer_ip, udp with 2152, gtp_u with teid and length, tinner ip]
+				up_ip_packet[0].src =  #enb-sgw IPs
+				up_ip_packet[1] #UE-google.com IPs.
+				data = self.gtp_encap(eth, ip_packet[1], upd_packet, gtp_packet)
+				out_port = 2	#outport is the port to ovs
+				actions = [parser.OFPActionOutput(out_port)]
+				out = parser.OFPPacketOut(datapath=datapath, buffer_id=msg.buffer_id, in_port=in_port, actions=actions, data=data)
+				datapath.send_msg(out)
+				print "Sending packet to port %d " % out_port
+				print "##############"
+				return
+
+
+
 	if packet.Packet(msg.data).get_protocol(udp.udp):
-		ip_packet = packet.Packet(msg.data).get_protocols(ipv4.ipv4)
 		udp_packet = packet.Packet(msg.data).get_protocols(udp.udp)
+		up_ip_packet = ip_packet
+
 		if udp_packet and udp_packet[0].dst_port == GTP_PORT: #GTP-U packet
 			print "############################################"
-			print "ip_packet[0].src=%s, ip_packet[0].dst=%s"%(ip_packet[0].src,ip_packet[0].dst)
 			print "ip_packet[1].src=%s, ip_packet[1].dst=%s"%(ip_packet[1].src,ip_packet[1].dst)
 
 			print "packet in: in_port=%d eth.dst = %s  eth.src = %s  dpid = %d  outport = %d" % (in_port,str(dst),str(src),dpid,out_port)
@@ -149,26 +193,47 @@ class SimpleSwitch13(app_manager.RyuApp):
 				icmp_packet = packet.Packet(msg.data).get_protocol(icmp.icmp)
 				#print len(icmp_packet.data)
 				#e = ethernet.ethernet(arp_packet.src_mac, target.mac, ether.ETH_TYPE_ARP)	
-				print ip_packet
-				eth.src = ovs_net_server_mac
-				eth.dst = ol_net_server_mac 
+				#print ip_packet
 				if ip_packet[1]:
-					ip_packet[1].src = ovs_net_server_ip
+					print "*****To offloading..."
+					eth.src = ovs_net_server_mac
+					eth.dst = ol_net_server_mac 
+					ip_packet[1].src = ovs_net_server_ip #change IP src/dst adds to ovs/ols.
 					ip_packet[1].dst = ol_net_server_ip
-					#echo = icmp.echo(id_=66, seq=1)
-					#ping = icmp.icmp(icmp.ICMP_ECHO_REQUEST,code=0, csum=0, data=echo)
-					data = self.decap_packet(eth, ip_packet[1], icmp_packet) 
-					out_port = 3
+					data = self.decap_packet(eth, ip_packet[1], icmp_packet) #build a ICMP packet.
+					out_port = 3	#out port is the port to ols.
 					actions = [parser.OFPActionOutput(out_port)]
 					out = parser.OFPPacketOut(datapath=datapath, buffer_id=msg.buffer_id, in_port=in_port, actions=actions, data=data)
 					datapath.send_msg(out)
 					print "Sending packet to port %d " % out_port
 					print "##############"
 					return
-
-	print "Received uninterested packet, broadcasting to 2 and 3..."
+	'''
+	if packet.Packet(msg.data).get_protocol(arp.arp): #received arp packets
+		arp_packet = packet.Packet(msg.data).get_protocols(arp.arp)[0]
+		src_mac = ""
+		dst_mac = ""
+		old_src_ip = arp_packet.src_ip
+		if arp_packet.dst_ip == ovs_net_cloud_ip:
+			print "ARP replying %s ..." % ovs_net_cloud_ip 
+			arp_packet.dst_mac = arp_packet.src_mac
+			arp_packet.src_mac = ovs_net_cloud_mac #eth1 in ovs 
+			arp_packet.src_ip = ovs_net_cloud_ip
+			arp_packet.dst_ip = "192.168.4.90"
+		if arp_packet.dst_ip == ovs_net_server_ip:
+			print "ARP replying %s ..." % ovs_net_server_ip 
+			arp_packet.dst_mac = arp_packet.src_mac
+			arp_packet.src_mac = ovs_net_server_mac #eth2 in ovs 
+			arp_packet.src_ip = ovs_net_server_ip
+			arp_packet.dst_ip = old_src_ip
+			
+	
+		eth.src = arp_packet.src_mac
+		eth.dst = arp_packet.dst_mac
+		arp_packet.opcode = arp.ARP_REPLY
+		data = self.create_arp(arp_packet, eth)
+	'''	
  	actions = [parser.OFPActionOutput(out_port)]
-
         # install a flow to avoid packet_in next time
         if out_port != ofproto.OFPP_FLOOD:
             match = parser.OFPMatch(in_port=in_port, eth_dst=dst)
