@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: paper.aux
+The style file: acm.bst
+Database file #1: biblio.bib
+Warning--can't use both volume and number fields in agarwal2009matchmaking
+Warning--empty journal in jin2013softcell
+You've used 13 entries,
+            2253 wiz_defined-function locations,
+            595 strings with 6333 characters,
+and the built_in function-call counts, 4867 in all, are:
+= -- 461
+> -- 226
+< -- 0
++ -- 94
+- -- 80
+* -- 333
+:= -- 746
+add.period$ -- 35
+call.type$ -- 13
+change.case$ -- 80
+chr.to.int$ -- 0
+cite$ -- 15
+duplicate$ -- 208
+empty$ -- 405
+format.name$ -- 80
+if$ -- 1053
+int.to.chr$ -- 0
+int.to.str$ -- 13
+missing$ -- 8
+newline$ -- 64
+num.names$ -- 26
+pop$ -- 114
+preamble$ -- 1
+purify$ -- 66
+quote$ -- 0
+skip$ -- 164
+stack$ -- 0
+substring$ -- 261
+swap$ -- 73
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 52
+warning$ -- 2
+while$ -- 47
+width$ -- 15
+write$ -- 132
+(There were 2 warnings)

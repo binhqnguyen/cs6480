@@ -1,0 +1,53 @@
+\section{Introduction}
+
+As the cellular network is moving toward all-IP, accessing a variety of services 
+using smart phones or tablets has become more and more popular. 
+While the popular web browsing does not require a strict Quality 
+of Service (QoS) requirement, services such as gaming and cloud services 
+require a certain delay and bandwidth budget in order to operate appropriately. These QoS realizations are deeply 
+integrated into the current cellular network design as multiple QCIs (QoS class of identifier) are specified in 3GPP specifications. 
+For example, as in ~\cite{3GPP:2012}, online real time gaming services require 50ms delay budget with 
+a guaranteed bit-rate (GBR), interactive gaming services require 100ms of delay budget.\\
+
+The current cellular network architecture, however, has some limitations that hinder the efforts to 
+deeply reduce network delay. As mentioned in ~\cite{balakrishnan2009s}, the number of gateways in 
+3G networks is small, and since these gateways are the Internet access points, 
+traffic in cellular network have to pass through these geographically distributed nodes and 
+this adds additional delay to the path as opposed to direct routing 
+(hierarchical routing issue ~\cite{Dong:2011:MIU:2043468.2043472}). 
+Moreover, despite the fact that the recent network design (e.i., 4G/Longterm Evolution and Evolved Packet Core or 
+4G/LTE-EPC) is flat and the delay caused by the cellular 
+core network is reduced (the average end-to-end RTT is about 70ms in 4G/LTE ~\cite{huang2013depth}), 
+end-to-end delay still suffers from and is gradually dominated by the Internet delay (the delay between 
+cellular gateways and Internet servers). This delay could not be eliminated by any mean
+due to the constraint of speed of light.\\
+
+There are approaches that try to reduce the end-to-end delay in cellular networks by 
+leveraging Content Delivery Network (CDN) and knowledge about the geographical distribution of 
+cellular gateways. For example, cloud providers move their CDN servers close to the cellular 
+core network to reduce the Internet delay portion; knowledge about the geographical distribution 
+of IP addresses of mobile devices aids the CDN servers placement ~\cite{xu2011cellular}; or 
+grouping P2P (peer-to-peer) devices that are geographically closed could reduce the 
+delay between them ~\cite{agarwal2009matchmaking}. All of the above works, 
+however, concentrate on the Internet portion of the end-to-end delay yet 
+can not further reduce the total delay due to the hierarchical routing issue remained inside the core. 
+Moreover, the fact that the number of cellular gateways is small and these gateways are geographically distributed 
+adds another degree of complexity to the above approaches.\\
+
+Our work is strongly inspired by MOCA ~\cite{banerjee2013moca}. 
+MOCA proposed an offloading architecture for cellular networks in which 
+services can be placed inside the core network to eliminate both the hierarchical routing issue 
+and Internet delay. MOCA leverages SDN (Software-defined Network) to offload traffic 
+to a local SPGW (service and packet gateway) instance and an offloading server inside the core.  
+In MOCA architecture, although modifications in the current network were intentionally minimized, 
+the MME (Mobility Management Entity) still played a centralized role and need to be modified. 
+Here, we raise the question of whether SDN could realize the offloading architecture 
+proposed in MOCA without touching the components of the current cellular architecture.\\
+
+The rest of the paper is presented as follow: section 2 provides a background information 
+of 4G/LTE-EPC networks, section 3 describes our approach and the high-level system design, 
+section 4 presents our implementation, evaluation and results are presented in section 5.\\
+
+
+
+

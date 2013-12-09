@@ -1,0 +1,7 @@
+stream          rttmin  avg             max             mdev 
+youtube.com     2.524	2.811			5.064			0.507 
+metacafe.com    45.276	52.811			62.640			7.006
+hulu.com        51.854	52.185			54.202			0.466
+veoh.com        68.280	68.610			71.951			0.684
+local-server 	0 		0 				0 				0
+

@@ -1,0 +1,77 @@
+\begin{thebibliography}{10}
+
+\bibitem{py_struct}
+{\sc {}}.
+\newblock {struct - Interpret strings as packed binary data}.
+\newblock \url{docs.python.org/2/library/struct.html}.
+
+\bibitem{3GPP:2012}
+{\sc 3GPP}.
+\newblock 3gpp ts 23.203 policy and charging control architecture.
+\newblock Tech. rep., 3GPP, 03 2012.
+
+\bibitem{agarwal2009matchmaking}
+{\sc Agarwal, S., and Lorch, J.~R.}
+\newblock Matchmaking for online games and other latency-sensitive p2p systems.
+\newblock In {\em ACM SIGCOMM Computer Communication Review\/} (2009), vol.~39,
+  ACM, pp.~315--326.
+
+\bibitem{balakrishnan2009s}
+{\sc Balakrishnan, M., Mohomed, I., and Ramasubramanian, V.}
+\newblock Where's that phone?: geolocating ip addresses on 3g networks.
+\newblock In {\em Proceedings of the 9th ACM SIGCOMM conference on Internet
+  measurement conference\/} (2009), ACM, pp.~294--300.
+
+\bibitem{banerjee2013moca}
+{\sc Banerjee, A., Chen, X., Erman, J., Gopalakrishnan, V., Lee, S., and Van
+  Der~Merwe, J.}
+\newblock Moca: a lightweight mobile cloud offloading architecture.
+\newblock In {\em Proceedings of the eighth ACM international workshop on
+  Mobility in the evolving internet architecture\/} (2013), ACM, pp.~11--16.
+
+\bibitem{Dong:2011:MIU:2043468.2043472}
+{\sc Dong, W., Ge, Z., and Lee, S.}
+\newblock 3g meets the internet: Understanding the performance of hierarchical
+  routing in 3g networks.
+\newblock In {\em Proceedings of the 23rd International Teletraffic Congress\/}
+  (2011), ITC '11, International Teletraffic Congress, pp.~15--22.
+
+\bibitem{http://www.serverpact.com:2013}
+{\sc http://www.serverpact.com}.
+\newblock Top 10 gaming servers of our complete serverpact database, 11 2013.
+
+\bibitem{http://www.techsupportalert.com:2013}
+{\sc http://www.techsupportalert.com}.
+\newblock 5 best free video streaming sites, 11 2013.
+
+\bibitem{huang2013depth}
+{\sc Huang, J., Qian, F., Guo, Y., Zhou, Y., Xu, Q., Mao, Z.~M., Sen, S., and
+  Spatscheck, O.}
+\newblock An in-depth study of lte: Effect of network protocol and application
+  behavior on performance.
+\newblock In {\em Proceedings of the ACM SIGCOMM 2013 conference on SIGCOMM\/}
+  (2013), ACM, pp.~363--374.
+
+\bibitem{jin2013softcell}
+{\sc Jin, X., Li, L.~E., Vanbever, L., and Rexford, J.}
+\newblock Softcell: Scalable and flexible cellular core network architecture.
+
+\bibitem{li2012toward}
+{\sc Li, L.~E., Mao, Z.~M., and Rexford, J.}
+\newblock Toward software-defined cellular networks.
+\newblock In {\em Software Defined Networking (EWSDN), 2012 European Workshop
+  on\/} (2012), IEEE, pp.~7--12.
+
+\bibitem{Minecraft.net:2013}
+{\sc Minecraft.net}.
+\newblock Minecraft, 11 2013.
+
+\bibitem{xu2011cellular}
+{\sc Xu, Q., Huang, J., Wang, Z., Qian, F., Gerber, A., and Mao, Z.~M.}
+\newblock Cellular data network infrastructure characterization and implication
+  on mobile content placement.
+\newblock In {\em Proceedings of the ACM SIGMETRICS joint international
+  conference on Measurement and modeling of computer systems\/} (2011), ACM,
+  pp.~317--328.
+
+\end{thebibliography}
