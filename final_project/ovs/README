@@ -1,0 +1,4 @@
+OVS code:
+1. ryu_lib, of_13: ryu and openflow wireshark libraries.
+2. gtp_controller: the actual controller code that does offloading.
+3. ovs_setup_scripts: scripts to start openvswitch, create a switch with ports (manual installing is needed) 
